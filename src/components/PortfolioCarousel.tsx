@@ -1,132 +1,172 @@
 
 import React from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const portfolioItems = [
   {
     title: "Blue Oasis Pools",
     tagline: "Custom Pool Builds & Outdoor Luxury",
     image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
-    description: "Bright, interactive website for a custom pool builder. Animated galleries, modern forms, 200% increase in leads.",
+    url: "#"
   },
   {
     title: "Sparkle Pool Cleaning",
     tagline: "Cleaning & Maintenance Platform",
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80",
-    description: "Easy membership system & booking for weekly pool care. Conversion-focused and review-driven.",
+    url: "#"
   },
   {
     title: "Sunset Backyard Living",
     tagline: "Outdoor Living & Water Features",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
-    description: "Premium patios, fire features, and poolside projects. Before/after effects, gorgeous visuals.",
+    url: "#"
   },
   {
     title: "Palm Paradise Pools",
     tagline: "Turnkey Backyard Transformations",
     image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
-    description: "Lightning-fast booking and scroll experiences for this pool startup. Modern branding, custom icons.",
-  },
-  {
-    title: "Haven Home Services",
-    tagline: "Landscaping & Pool Pros",
-    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800&q=80",
-    description: "Full-service pool/landscaping packages. Portfolio filter, robust testimonials, quick contact.",
+    url: "#"
   },
   {
     title: "Prestige Pools & Spas",
     tagline: "Award-Winning Pool Contractors",
     image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80",
-    description: "Modern, glassy UI for high-end pool builds—dramatic forms, gorgeous water effects.",
+    url: "#"
   },
   {
     title: "Sunrise Spas",
     tagline: "Luxury Spa & Pool Experts",
     image: "https://images.unsplash.com/photo-1455656678494-4d1b5f3e7ad3?w=800&q=80",
-    description: "Online spa showcase & lead magnet landing. Vivid before/after galleries, super clean interface.",
+    url: "#"
   },
   {
-    title: "Poolside Pros",
-    tagline: "Maintenance & Equipment Specialists",
-    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80",
-    description: "Automated inquiry flows for service needs—scheduling, repair, upgrades, all streamlined.",
+    title: "Haven Home Services",
+    tagline: "Landscaping & Pool Pros",
+    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800&q=80",
+    url: "#"
   },
   {
     title: "Aqua Innovations",
     tagline: "Creative Water Features",
     image: "https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=800&q=80",
-    description: "Unique water features, fountains & playful details. Gorgeous project catalog with video."
+    url: "#"
+  },
+  {
+    title: "Poolside Pros",
+    tagline: "Maintenance & Equipment Specialists",
+    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80",
+    url: "#"
   },
   {
     title: "Premier Backyard",
     tagline: "Complete Outdoor Living",
     image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&q=80",
-    description: "All-in-one outdoor & pool site. Large project gallery, showcase videos, bold branding.",
+    url: "#"
   },
 ];
 
-const AUTOPLAY_INTERVAL = 2500; // ms
+// Show 3 on desktop, 2 on tablet, 1 on mobile
+const useResponsiveSlidesToShow = () => {
+  const [slidesToShow, setSlidesToShow] = React.useState(3);
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) setSlidesToShow(1);
+      else if (window.innerWidth < 1024) setSlidesToShow(2);
+      else setSlidesToShow(3);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return slidesToShow;
+};
 
 const PortfolioCarousel = () => {
-  const [current, setCurrent] = React.useState(0);
-  const [fade, setFade] = React.useState(true);
+  const slidesToShow = useResponsiveSlidesToShow();
+  const [startIdx, setStartIdx] = React.useState(0);
 
+  const maxIdx = portfolioItems.length - slidesToShow;
+  const canPrev = startIdx > 0;
+  const canNext = startIdx < maxIdx;
+
+  const goPrev = () => setStartIdx((idx) => Math.max(idx - slidesToShow, 0));
+  const goNext = () => setStartIdx((idx) => Math.min(idx + slidesToShow, maxIdx));
+
+  // Every 2.7s, auto-advance, restart at 0 if at the end.
   React.useEffect(() => {
-    const timeout = setTimeout(() => setFade(false), AUTOPLAY_INTERVAL - 300);
     const interval = setInterval(() => {
-      setFade(true);
-      setCurrent((prev) => (prev + 1) % portfolioItems.length);
-      setTimeout(() => setFade(false), 300);
-    }, AUTOPLAY_INTERVAL);
-    return () => {
-      clearInterval(interval);
-      clearTimeout(timeout);
-    };
-  }, []);
-
-  const item = portfolioItems[current];
+      setStartIdx((idx) => (idx < maxIdx ? idx + slidesToShow : 0));
+    }, 2700);
+    return () => clearInterval(interval);
+  }, [slidesToShow, maxIdx]);
 
   return (
-    <section id="portfolio" className="py-24 bg-gradient-to-br from-blue-50 to-blue-100 flex justify-center">
-      <div className="w-full max-w-3xl px-4 sm:px-8">
-        <div className="rounded-3xl bg-white shadow-xl px-6 py-12 relative">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-dp-blue-dark mb-5 text-center animate-fade-in">
-            Our Work for Pool & Home Brands
-          </h2>
-          <p className="text-lg text-dp-blue-dark mb-10 text-center animate-fade-in">
-            Divin-Profits crafts conversion-boosting sites for pool and home service companies.
-          </p>
-          <div className="max-w-lg mx-auto">
-            <div
-              className={`relative w-full overflow-hidden rounded-3xl shadow-glass mb-6 group transition-all ${
-                fade ? "animate-fade-in" : "animate-fade-out"
-              }`}
-              style={{ minHeight: 300 }}
-              key={item.title}
-            >
-              <img
-                src={item.image}
-                alt={`${item.title} website`}
-                className="w-full h-72 object-cover transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-dp-blue/10 pointer-events-none transition-all opacity-0 group-hover:opacity-50" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col gap-1 bg-white/70 backdrop-blur-md rounded-b-3xl">
-                <h4 className="font-display text-xl text-dp-blue-dark font-bold">{item.title}</h4>
-                <span className="text-dp-blue font-semibold">{item.tagline}</span>
-                <span className="text-sm text-gray-700">{item.description}</span>
+    <section id="portfolio" className="py-24 bg-[#fafbfc] flex flex-col items-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-dp-blue-dark mb-8 text-center">
+        Check Out Our Work
+      </h2>
+      <div className="relative w-full max-w-6xl px-2 sm:px-6">
+        {/* Slider */}
+        <div className="flex items-center justify-center gap-2">
+          <button
+            className="hidden sm:flex items-center justify-center h-12 w-12 rounded-full bg-white shadow-glass border border-gray-200 hover:bg-blue-50 transition-all disabled:opacity-40 z-10"
+            onClick={goPrev}
+            disabled={!canPrev}
+            aria-label="Previous"
+            style={{ top: "50%", transform: "translateY(-50%)" }}
+          >
+            <ChevronLeft size={28} className="text-dp-blue" />
+          </button>
+          <div className={`flex-1 grid grid-cols-1 sm:grid-cols-${slidesToShow} gap-6`}>
+            {/* Use slice for visible cards */}
+            {portfolioItems.slice(startIdx, startIdx + slidesToShow).map((item, idx) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-3xl shadow-xl border border-gray-100 p-0 relative flex flex-col items-stretch overflow-hidden group h-44 sm:h-56 md:h-60 transition-all duration-300 hover:shadow-2xl"
+                style={{ minWidth: 0 }}
+              >
+                <a href={item.url} tabIndex={-1}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="object-cover w-full h-32 sm:h-36 md:h-40 rounded-t-3xl shadow hover:scale-105 transition-transform duration-400"
+                  />
+                </a>
+                <div className="p-4 pb-3 flex-1 flex flex-col justify-between">
+                  <h3 className="font-semibold text-dp-blue-dark text-base line-clamp-1">{item.title}</h3>
+                  <span className="text-xs text-dp-blue">{item.tagline}</span>
+                </div>
               </div>
-            </div>
-            <div className="flex justify-center gap-2 mt-2">
-              {portfolioItems.map((_, idx) => (
-                <span
-                  key={idx}
-                  className={`inline-block w-2 h-2 rounded-full transition-all duration-300 ${
-                    idx === current ? "bg-dp-blue" : "bg-gray-300"
-                  }`}
-                  aria-label={idx === current ? "Current Slide" : undefined}
-                />
-              ))}
-            </div>
+            ))}
           </div>
+          <button
+            className="hidden sm:flex items-center justify-center h-12 w-12 rounded-full bg-white shadow-glass border border-gray-200 hover:bg-blue-50 transition-all disabled:opacity-40 z-10"
+            onClick={goNext}
+            disabled={!canNext}
+            aria-label="Next"
+            style={{ top: "50%", transform: "translateY(-50%)" }}
+          >
+            <ChevronRight size={28} className="text-dp-blue" />
+          </button>
+        </div>
+        {/* Pagination Dots */}
+        <div className="flex justify-center gap-1 mt-8">
+          {Array.from({ length: Math.ceil(portfolioItems.length / slidesToShow) }).map((_, pg) => {
+            const isActive =
+              startIdx / slidesToShow === pg ||
+              (pg === 0 && startIdx < slidesToShow);
+            return (
+              <span
+                key={pg}
+                className={`inline-block w-3 h-3 rounded-full mx-0.5 transition-all duration-300 ${
+                  isActive
+                    ? "bg-dp-blue shadow-lg scale-110"
+                    : "bg-gray-300 opacity-60"
+                }`}
+                aria-label={isActive ? "Current Portfolio Page" : undefined}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
@@ -134,3 +174,4 @@ const PortfolioCarousel = () => {
 };
 
 export default PortfolioCarousel;
+
