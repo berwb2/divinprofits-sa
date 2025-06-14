@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -38,16 +37,13 @@ const PortfolioCarousel = () => (
   <section id="portfolio" className="py-16 bg-gradient-to-br from-blue-50 to-blue-100 relative">
     <div className="container relative">
       <h2 className="font-display text-3xl md:text-4xl font-bold text-dp-blue-dark mb-5 text-center animate-fade-in">
-        Our Portfolio
+        Check Out Our Work
       </h2>
-      <p className="text-lg text-gray-700 mb-10 text-center animate-fade-in">
+      <p className="text-lg text-dp-blue-dark mb-10 text-center animate-fade-in">
         See how DeepDiveProfits elevates brands with world-class design and performance.
       </p>
       <div className="relative max-w-4xl mx-auto animate-scale-in">
-        <Carousel
-          opts={{ loop: true, align: "center" }}
-          className="overflow-visible"
-        >
+        <Carousel opts={{ loop: true, align: "center" }} className="overflow-visible">
           <CarouselContent>
             {portfolioItems.map((item, i) => (
               <CarouselItem key={i} className="flex flex-col items-center">
@@ -57,7 +53,7 @@ const PortfolioCarousel = () => (
                     alt={`${item.title} screenshot`}
                     className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-dp-glass pointer-events-none transition-all opacity-0 group-hover:opacity-60" />
+                  <div className="absolute inset-0 bg-dp-blue/10 pointer-events-none transition-all opacity-0 group-hover:opacity-50" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col gap-1 bg-white/60 backdrop-blur-sm rounded-br-3xl rounded-bl-3xl">
                     <h4 className="font-display text-xl text-dp-blue-dark font-bold">{item.title}</h4>
                     <span className="text-dp-blue font-bold">{item.tagline}</span>

@@ -8,7 +8,7 @@ const logos = [
 ];
 
 const TrustSection = () => (
-  <section className="py-12 px-2 bg-white/80 backdrop-blur border-t border-b border-blue-100">
+  <section className="py-12 px-2 bg-white/90 backdrop-blur border-t border-b border-dp-blue/10">
     <div className="container flex flex-col items-center gap-6">
       <h3 className="font-display font-bold text-xl text-dp-blue-dark text-center">
         Trusted by Leading Brands & Startups
@@ -19,7 +19,7 @@ const TrustSection = () => (
             key={logo.name}
             src={logo.url}
             alt={`${logo.name} logo`}
-            className="h-10 w-auto object-contain opacity-75 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
+            className="h-10 w-auto object-contain opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all border-2 border-dp-blue-light/10 rounded-lg bg-white/80 shadow"
           />
         ))}
       </div>

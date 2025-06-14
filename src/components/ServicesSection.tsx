@@ -1,4 +1,3 @@
-
 import { Zap, TrendingUp, Code } from "lucide-react";
 
 const services = [
@@ -31,7 +30,7 @@ const ServicesSection = () => (
             key={service.title}
             className="flex-1 bg-white/80 backdrop-blur-2xl shadow-glass rounded-2xl p-8 transition-transform hover:scale-105 group border border-dp-blue/10 hover:border-dp-blue"
           >
-            <div className="w-14 h-14 bg-gradient-to-br from-blue-100 via-blue-300 to-blue-400 rounded-xl flex items-center justify-center shadow mb-4 group-hover:rotate-[-2deg] transition-transform">
+            <div className="w-14 h-14 bg-gradient-to-br from-dp-blue-light to-dp-blue rounded-xl flex items-center justify-center shadow mb-4 group-hover:rotate-[-2deg] transition-transform">
               {service.icon}
             </div>
             <h3 className="font-display text-xl font-bold mb-2 text-dp-blue-dark">{service.title}</h3>
@@ -42,7 +41,7 @@ const ServicesSection = () => (
       <div className="text-center mt-8">
         <a
           href="#contact"
-          className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow-glass hover:scale-105 transition-transform text-lg"
+          className="bg-gradient-to-r from-dp-blue-light to-dp-blue text-white px-8 py-4 rounded-full font-semibold shadow-glass hover:scale-105 transition-transform text-lg"
         >
           Let's Build Something Great
         </a>
