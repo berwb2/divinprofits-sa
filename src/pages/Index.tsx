@@ -1,24 +1,25 @@
 
-import Header from "../components/Header";
+import AppHeader from "../components/AppHeader";
 import Hero from "../components/Hero";
-import Process from "../components/Process";
-import Testimonials from "../components/Testimonials";
-import Portfolio from "../components/Portfolio";
-import Trust from "../components/Trust";
-import Footer from "../components/Footer";
+import VideoShowcase from "../components/VideoShowcase";
+import PortfolioCarousel from "../components/PortfolioCarousel";
+import ServicesSection from "../components/ServicesSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import TrustSection from "../components/TrustSection";
+import AppFooter from "../components/AppFooter";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Header />
+const Index = () => (
+  <div className="font-sans bg-gradient-to-b from-dp-blue-light via-white to-dp-blue-dark min-h-screen w-full">
+    <AppHeader />
+    <main>
       <Hero />
-      <Process />
-      <Testimonials />
-      <Portfolio />
-      <Trust />
-      <Footer />
-    </div>
-  );
-};
-
+      <VideoShowcase />
+      <PortfolioCarousel />
+      <ServicesSection />
+      <TestimonialsSection />
+      <TrustSection />
+    </main>
+    <AppFooter />
+  </div>
+);
 export default Index;

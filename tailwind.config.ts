@@ -14,10 +14,14 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1440px'
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['DM Sans', 'Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				display: ['Montserrat', 'ui-sans-serif', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'dp-blue': {
+					DEFAULT: '#1656B9',
+					light: '#7E9BFF',
+					dark: '#102B4C',
+				},
+				'dp-glass': 'rgba(21,57,104,0.7)',
+				'dp-grad': 'linear-gradient(135deg,#297ff9 0%,#1656B9 80%,#16204C 100%)',
+				'dp-accent': '#5AE2FF',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -89,6 +101,13 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			backgroundImage: {
+				'dp-gradient': 'linear-gradient(135deg,#297ff9 0%,#1656B9 80%,#16204C 100%)',
+				'dp-glass-grad': 'linear-gradient(120deg,rgba(46,130,255,.9),rgba(22,86,185,.7) 90%,rgba(17,37,65,.7))',
+			},
+			boxShadow: {
+				'glass': '0 6px 32px 0 rgba(80,120,255,0.09),0 1.5px 12px 0 rgba(22,86,185,0.16)',
 			}
 		}
 	},
