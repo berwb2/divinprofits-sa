@@ -3,26 +3,42 @@ import React from "react";
 
 const testimonials = [
   {
-    name: "Isabella Chen",
-    company: "Apex Commerce",
-    text: "DeepDiveProfits delivered a 320% conversion lift. The process was smooth, transparent, and the team exceeded all expectations. Highly recommend!",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Laura Martinez",
+    company: "Blue Oasis Pools",
+    text: "Divin-Profits totally transformed our website. Our pool installation requests shot up by 250%! The site feels premium and every client mentions it.",
+    avatar: "https://randomuser.me/api/portraits/women/20.jpg",
     rating: 5,
     highlight: true,
   },
   {
-    name: "Samuel Patel",
-    company: "Zenith SaaS",
-    text: "Their attention to UX, delightful animations, and deep technical skills set them apart. Our SaaS signups soared within weeks.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Michael Rivers",
+    company: "Prestige Pools & Spas",
+    text: "Absolutely seamless process! Our bookings doubled, the animations and booking flows are just awesome.",
+    avatar: "https://randomuser.me/api/portraits/men/31.jpg",
     rating: 5,
     highlight: false,
   },
   {
-    name: "Lea Müller",
-    company: "BrandLift",
-    text: "The team turned our ideas into a breathtaking site. Our brand now looks as elite as it feels—clients notice!",
-    avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Tina Patel",
+    company: "Sparkle Pool Cleaning",
+    text: "Clients say they found us because the website stood out. Divin-Profits gets the pool business and made us look unique!",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+    rating: 5,
+    highlight: true,
+  },
+  {
+    name: "James Harper",
+    company: "Sunset Backyard Living",
+    text: "Super smooth experience. The dashboard, the forms—everything just works and looks beautiful. Highly recommend!",
+    avatar: "https://randomuser.me/api/portraits/men/35.jpg",
+    rating: 5,
+    highlight: false,
+  },
+  {
+    name: "Emily Nguyen",
+    company: "Palm Paradise Pools",
+    text: "The new website tells our story and showcases pools perfectly. We went from local to leader in one summer.",
+    avatar: "https://randomuser.me/api/portraits/women/21.jpg",
     rating: 5,
     highlight: true,
   },
@@ -33,7 +49,7 @@ const TestimonialsSection = () => (
     <div className="w-full max-w-5xl mx-auto px-6 sm:px-10 lg:px-14">
       <div className="rounded-3xl bg-white shadow-xl min-h-[420px] px-4 py-12 flex flex-col">
         <h2 className="font-display text-3xl md:text-4xl text-center font-bold text-dp-blue-dark mb-2 animate-fade-in">
-          Loved by our Clients
+          Loved by our Pool & Home Service Clients
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 items-stretch">
           {testimonials.map((t, i) => (

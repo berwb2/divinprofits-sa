@@ -11,30 +11,43 @@ import React from "react";
 // AUTOPLAY LOGIC
 import useEmblaCarousel from "embla-carousel-react";
 
+// Images: You can use Unsplash or similar placeholder images for each company
 const portfolioItems = [
   {
-    title: "Zenith SaaS",
-    tagline: "Conversion-Optimized B2B SaaS Website",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80",
-    description: "Stunning landing, live dashboards, 48% better engagement.",
+    title: "Blue Oasis Pools",
+    tagline: "Custom Pool Builds & Outdoor Luxury",
+    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
+    description: "Bright, interactive website for a custom pool builder. Featured animated project galleries and lead form—200% increase in quotes.",
   },
   {
-    title: "Apex Commerce",
-    tagline: "Award-Winning E-commerce Redesign",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
-    description: "Modern UX, instant checkout, +320% sales in 90 days.",
+    title: "Sparkle Pool Cleaning",
+    tagline: "Cleaning & Maintenance Platform",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80",
+    description: "Membership system and scheduling workflows for weekly pool care offers. Conversion-focused, with auto-quoting and reviews.",
   },
   {
-    title: "BrandLift Agency",
-    tagline: "Vibrant Creative Portfolio",
-    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=600&q=80",
-    description: "Showcases full case studies—blending story and visual impact.",
+    title: "Sunset Backyard Living",
+    tagline: "Outdoor Living & Water Features",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+    description: "Showcases premium patios, fire features, and luxury poolside living projects with immersive before/after effects.",
   },
   {
-    title: "FinEdge App",
-    tagline: "Premium Lead Gen Funnel",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&q=80",
-    description: "Glassmorphic UI, subtle animations, +55% qualified leads.",
+    title: "Palm Paradise Pools",
+    tagline: "Turnkey Backyard Transformations",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+    description: "Gorgeous scroll experiences for a fast-growing pool startup. Modern branding, custom icon sets, and lightning-quick booking.",
+  },
+  {
+    title: "Haven Home Services",
+    tagline: "Landscaping & Pool Pros",
+    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800&q=80",
+    description: "Full-service pool and landscaping bundles. Robust testimonials, portfolio filter, and vibrant contact flow.",
+  },
+  {
+    title: "Prestige Pools & Spas",
+    tagline: "Award-Winning Pool Contractors",
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80",
+    description: "Modern, glassy UI for high-end pool builds—dramatic forms, animated water effects, and vivid before/after galleries.",
   },
 ];
 
@@ -61,10 +74,10 @@ const PortfolioCarousel = () => {
       <div className="w-full max-w-6xl mx-auto px-6 sm:px-10 lg:px-14 relative">
         <div className="rounded-3xl bg-white shadow-xl px-6 py-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-dp-blue-dark mb-5 text-center animate-fade-in">
-            Check Out Our Work
+            Pool & Home Companies: Our Sites in Action
           </h2>
           <p className="text-lg text-dp-blue-dark mb-10 text-center animate-fade-in">
-            See how DeepDiveProfits elevates brands with world-class design and performance.
+            Divin-Profits elevates pool & outdoor brands with beautiful, conversion-focused websites.
           </p>
           <div className="relative max-w-4xl mx-auto animate-scale-in">
             <div ref={emblaRef}>
