@@ -113,3 +113,41 @@
   50% { box-shadow: 0 0 10px 2px rgba(22, 86, 185, 0.14),0 6px 32px 0 rgba(80,120,255,0.13);}
 }
 .pulse { animation: pulse 1.8s cubic-bezier(.4,0,.6,1) infinite; }
+
+/* Expansive boxed section backgrounds and accent border styles for Figma-style look */
+.section-box {
+  @apply w-full max-w-5xl mx-auto px-4 sm:px-10 lg:px-14 bg-white rounded-3xl shadow-xl border border-gray-100;
+}
+
+.card-dashed-orange {
+  border: 2px dashed #fb923c !important; /* orange-400 */
+}
+.card-dashed-blue {
+  border: 2px dashed #1656B9 !important;
+}
+
+/* Additional animation for color popping highlights */
+@keyframes color-pop {
+  0% {
+    box-shadow: 0 0 0 0 #fb923c30;
+    border-color: #fb923c;
+  }
+  70% {
+    box-shadow: 0 0 24px 8px #fb923c33;
+    border-color: #fb923c;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #fb923c30;
+    border-color: #fb923c;
+  }
+}
+.animate-color-pop { animation: color-pop 1.6s cubic-bezier(.6,0,.7,1) 1; }
+
+html, body {
+  background-color: #f7f7f7;
+}
+
+/* Slightly bump up base font-size for Figma-like readability */
+body {
+  font-size: 1.08rem;
+}
