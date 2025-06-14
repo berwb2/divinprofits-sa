@@ -4,7 +4,7 @@ const AppFooter = () => (
     <div className="container flex flex-col md:flex-row md:justify-between items-center gap-8">
       <div className="text-center md:text-left">
         <div className="flex items-center gap-2 mb-2">
-          <span className="font-display font-bold text-2xl text-white">DeepDiveProfits</span>
+          <span className="font-display font-bold text-2xl text-white">Divin-Profits</span>
         </div>
         <p className="mb-0 text-dp-blue-light text-base">
           Creating premium websites that drive profit—for businesses who demand results.
@@ -18,9 +18,10 @@ const AppFooter = () => (
       </div>
     </div>
     <div className="text-center mt-7 text-dp-blue-light/70 text-sm opacity-70">
-      &copy; {new Date().getFullYear()} DeepDiveProfits. All rights reserved.
+      &copy; {new Date().getFullYear()} Divin-Profits. All rights reserved.
     </div>
   </footer>
 );
 
 export default AppFooter;
+
