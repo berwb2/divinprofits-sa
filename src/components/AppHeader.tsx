@@ -14,60 +14,60 @@ const AppHeader = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/60 shadow-lg border-b border-blue-100 backdrop-blur-[10px] transition-all">
-      <div className="container flex justify-between items-center h-20 px-2 sm:px-7">
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="bg-gradient-to-br from-blue-700 via-dp-blue-light to-blue-400 w-12 h-12 rounded-2xl flex items-center justify-center shadow-glass hover:scale-105 transition-transform duration-150 border-2 border-dp-blue-light/50">
-            <span className="font-display font-extrabold text-2xl text-white tracking-tight drop-shadow-lg">D</span>
+    <header className="sticky top-4 z-50 w-full transition-all duration-300">
+      <div className="container flex justify-between items-center h-20 px-4 sm:px-6 mx-auto bg-white/70 border border-black/5 rounded-2xl shadow-lg shadow-black/[0.03] backdrop-blur-xl">
+        <a href="#" className="flex items-center gap-2.5 group">
+          <div className="bg-gradient-to-br from-dp-blue via-dp-blue-light to-dp-accent w-10 h-10 rounded-lg flex items-center justify-center shadow-md border-2 border-white/80 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-200">
+            <span className="font-display font-extrabold text-2xl text-white tracking-tight">D</span>
           </div>
-          <span className="font-display text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-dp-blue-light via-dp-blue to-dp-blue-dark bg-clip-text text-transparent tracking-tighter drop-shadow animate-fade-in">
+          <span className="font-display text-2xl font-bold text-dp-blue-dark tracking-tighter">
             Divin-Profits
           </span>
         </a>
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 text-dp-blue-dark font-semibold text-lg rounded-full bg-white/80 px-6 py-2 backdrop-blur-lg border border-blue-100 shadow-glass">
+        <nav className="hidden md:flex gap-1 text-dp-blue-dark font-semibold text-base">
           {navItems.map(({ label, href }) => (
             <a
               key={label}
               href={href}
-              className="relative inline-block px-3 py-1 rounded-full transition-colors duration-200 text-dp-blue-dark hover:bg-dp-blue/10 hover:text-dp-blue hover-scale story-link"
+              className="relative px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-dp-blue/10 text-gray-700 hover:text-dp-blue-dark"
             >
               {label}
             </a>
           ))}
         </nav>
-        <div className="hidden sm:flex">
+        <div className="hidden sm:flex items-center">
           <a
             href="#contact"
-            className="ml-5 bg-gradient-to-r from-dp-blue-light via-dp-accent to-dp-blue text-white px-7 py-3 rounded-full font-bold font-display tracking-wide shadow-glass transition-all duration-150 hover:scale-105 text-base border-2 border-white/60 hover:border-dp-blue-light animate-fade-in"
+            className="ml-4 bg-dp-blue-dark text-white px-6 py-2.5 rounded-lg font-semibold shadow-sm hover:scale-105 hover:bg-dp-blue transition-all duration-200 text-sm"
           >
             Get a Quote
           </a>
         </div>
         <button
-          className="md:hidden p-2 rounded-lg hover:bg-dp-blue-light/10 transition-colors"
+          className="md:hidden p-2 rounded-lg hover:bg-dp-blue/10 transition-colors"
           onClick={() => setMobileOpen((m) => !m)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
-          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-lg p-7 absolute left-2 right-2 top-[74px] rounded-2xl shadow-xl animate-fade-in border border-blue-200 z-40 flex flex-col items-center">
-          <nav className="flex flex-col gap-6">
+        <div className="md:hidden bg-white/95 backdrop-blur-lg p-5 absolute left-4 right-4 top-24 rounded-2xl shadow-xl animate-fade-in border border-black/5 z-40 flex flex-col items-center">
+          <nav className="flex flex-col gap-4 w-full">
             {navItems.map(({ label, href }) => (
               <a
                 key={label}
                 href={href}
-                className="text-dp-blue-dark text-lg font-semibold py-2 px-4 rounded-full transition-all hover:bg-blue-100/60 hover:text-dp-blue hover:pl-5 duration-200"
+                className="text-dp-blue-dark text-lg font-semibold py-2 px-4 rounded-lg transition-all hover:bg-dp-blue/10 hover:text-dp-blue-dark w-full text-center"
               >
                 {label}
               </a>
             ))}
             <a
               href="#contact"
-              className="bg-gradient-to-r from-dp-blue-light via-dp-accent to-dp-blue text-white px-7 py-3 rounded-full font-bold shadow-glass border-2 border-dp-blue-light transition-transform duration-150 hover:scale-105 text-base"
+              className="bg-dp-blue text-white px-7 py-3 mt-2 rounded-lg font-bold shadow-md border-2 border-dp-blue-light transition-transform duration-150 hover:scale-105 text-base w-full text-center"
             >
               Get a Quote
             </a>

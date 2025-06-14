@@ -11,7 +11,7 @@ import AppFooter from "../components/AppFooter";
 
 // The landing page is restructured to match the uploaded wireframe layout and order.
 const Index = () => (
-  <div className="font-sans bg-[#f7f7f7] min-h-screen w-full">
+  <div className="font-sans bg-white min-h-screen w-full">
     <AppHeader />
     <main>
       {/* 1. Hero Section */}

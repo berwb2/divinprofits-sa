@@ -1,31 +1,40 @@
 
 import React from "react";
+import { MoveRight } from "lucide-react";
 
 const Hero = () => (
   <section
     id="home"
-    className="relative flex flex-col items-center justify-center min-h-[92vh] md:min-h-[720px] py-24 overflow-hidden bg-gradient-to-br from-dp-blue-light/35 via-white to-dp-blue/90"
+    className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-white py-20"
   >
-    {/* Floating accent blobs */}
-    <div className="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-gradient-to-br from-dp-blue-light/60 via-blue-200/40 to-white/0 blur-3xl opacity-60 animate-fade-in" />
-    <div className="absolute -bottom-36 -right-24 w-96 h-96 rounded-full bg-gradient-to-tr from-dp-blue/70 via-dp-blue-dark/90 to-blue-900/0 blur-2xl opacity-50 animate-fade-in" />
-    {/* Glassy central card */}
-    <div className="relative z-10 max-w-3xl w-full text-center mx-auto px-8 py-16 sm:px-12 rounded-3xl bg-white/70 ring-2 ring-white/40 backdrop-blur-2xl shadow-glass-lg border border-dp-blue/10 animate-scale-in">
-      <h1 className="font-display text-5xl md:text-6xl font-extrabold text-dp-blue-dark mb-4 drop-shadow-lg tracking-tight leading-tight">
-        Transforming Your Vision <br />
-        <span className="block bg-clip-text text-transparent bg-gradient-to-r from-dp-blue-light via-dp-accent to-dp-blue-dark animate-fade-in">
-          Into Digital Brilliance
+    {/* Background Shapes */}
+    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] rounded-full bg-gradient-to-tr from-dp-blue/20 via-white to-white blur-3xl opacity-80" />
+    <div className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/2 w-[50rem] h-[50rem] rounded-full bg-gradient-to-bl from-dp-blue-light/20 via-white to-white blur-3xl" />
+
+    <div className="container relative z-10 text-center px-4">
+      <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold text-dp-blue-dark mb-6 drop-shadow-sm tracking-tighter leading-tight opacity-0 animate-fade-in">
+        Design Meets
+        <br />
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-dp-blue via-dp-blue-light to-dp-accent">
+          Performance.
         </span>
       </h1>
-      <p className="mt-5 text-2xl text-gray-800/90 font-normal leading-relaxed animate-fade-in">
-        We craft conversion-first, glassy web experiences <span className="font-display font-bold tracking-tight text-dp-blue">for brands who demand results</span>. Stand out &amp; win more clients with premium design, strategy, and technology—together.
+      <p className="max-w-3xl mx-auto mt-4 text-xl md:text-2xl text-gray-600 font-normal leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        We are a digital agency that builds stunning, conversion-focused websites with the polish and precision of a top-tier design studio.
       </p>
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row justify-center items-center animate-scale-in">
-        <a href="#portfolio" className="px-9 py-4 font-bold text-lg rounded-full bg-gradient-to-r from-dp-blue-light via-dp-accent to-dp-blue text-white shadow-lg hover:scale-105 transition-transform duration-200 hover:ring-2 hover:ring-dp-accent/80 focus:outline-none focus:ring-2 focus:ring-dp-blue">
-          See Our Work
+      <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <a
+          href="#contact"
+          className="group inline-flex items-center justify-center px-8 py-4 font-bold text-lg rounded-full bg-dp-blue-dark text-white shadow-lg hover:scale-105 hover:shadow-2xl hover:shadow-dp-blue/30 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-dp-blue/50"
+        >
+          <span>Start Your Project</span>
+          <MoveRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
-        <a href="#contact" className="px-9 py-4 font-bold text-lg rounded-full border-2 border-dp-blue text-dp-blue-dark bg-white/80 backdrop-blur hover:bg-dp-blue-dark hover:text-white shadow hover:border-dp-blue-light focus:outline-none transition-all">
-          Book a Free Consultation
+        <a
+          href="#portfolio"
+          className="group inline-flex items-center px-8 py-4 font-bold text-lg rounded-full border-2 border-transparent text-dp-blue-dark bg-white/50 backdrop-blur-sm hover:border-dp-blue-dark/20 hover:bg-white transition-all duration-300"
+        >
+          <span>Explore Our Work</span>
         </a>
       </div>
     </div>
@@ -33,4 +42,3 @@ const Hero = () => (
 );
 
 export default Hero;
-
