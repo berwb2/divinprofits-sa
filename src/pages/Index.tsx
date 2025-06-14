@@ -6,12 +6,12 @@ import ServicesSection from "../components/ServicesSection";
 import Process from "../components/Process";
 import PortfolioCarousel from "../components/PortfolioCarousel";
 import VideoShowcase from "../components/VideoShowcase";
-import TestimonialsSection from "../components/TestimonialsSection";
+import Testimonials from "../components/Testimonials";
 import AppFooter from "../components/AppFooter";
 
 // The landing page is restructured to match the uploaded wireframe layout and order.
 const Index = () => (
-  <div className="font-sans bg-gradient-to-b from-dp-blue-light via-white to-dp-blue-dark min-h-screen w-full">
+  <div className="font-sans bg-[#f7f7f7] min-h-screen w-full">
     <AppHeader />
     <main>
       {/* 1. Hero Section */}
@@ -27,7 +27,7 @@ const Index = () => (
       {/* 6. Video/Showcase Section */}
       <VideoShowcase />
       {/* 7. Client Testimonials */}
-      <TestimonialsSection />
+      <Testimonials />
     </main>
     {/* 8. Footer/End Banner */}
     <AppFooter />

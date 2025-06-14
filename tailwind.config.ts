@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -74,6 +75,7 @@ export default {
 				'dp-glass': 'rgba(21,57,104,0.7)',
 				'dp-grad': 'linear-gradient(135deg,#297ff9 0%,#1656B9 80%,#16204C 100%)',
 				'dp-accent': '#5AE2FF',
+				'dp-orange': '#F97316',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
