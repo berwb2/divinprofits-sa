@@ -20,7 +20,7 @@ const Hero = () => (
         </span>
       </h1>
       <p className="max-w-3xl mx-auto mt-4 text-xl md:text-2xl text-gray-600 font-normal leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-        At Divin Profits, we help brands svcale through smart web design and lead generation. We combine strategy, design, and automation to deliver websites that do the heavy lifting turning browsers into buyers
+        At Divin Profits, we help brands scale through smart web design and lead generation. We combine strategy, design and automation to deliver websites that do the heavy lifting turning browsers into buyers
       </p>
       <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
         <a
