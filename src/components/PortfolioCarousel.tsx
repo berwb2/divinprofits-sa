@@ -1,60 +1,7 @@
 
 import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-// List of portfolio items (replace images/links for your real work)
-const portfolioItems = [
-  {
-    title: "Blue Oasis Pools",
-    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "Aqua Essence Landscaping",
-    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "Palm Paradise Pools",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "Prestige Pools & Spas",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "Sunrise Spas",
-    image: "https://images.unsplash.com/photo-1455656678494-4d1b5f3e7ad3?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "Backyard Living Co.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "Haven Home Services",
-    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "ClearView Pool Cleaning",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "Sunset Decks & Patios",
-    image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&q=80",
-    url: "#"
-  },
-  {
-    title: "Elite Pool Builds",
-    image: "https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=800&q=80",
-    url: "#"
-  },
-];
+import { portfolioItems } from "../data/portfolio";
 
 // Responsive rows/cols for different screen sizes
 function useResponsiveGrid() {

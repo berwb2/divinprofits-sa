@@ -1,45 +1,8 @@
 
-const Portfolio = () => {
-  const portfolioItems = [
-    {
-      title: "E-commerce Platform",
-      category: "E-commerce",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      description: "Modern online store with advanced filtering and checkout"
-    },
-    {
-      title: "Corporate Website",
-      category: "Corporate",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
-      description: "Professional business website with CRM integration"
-    },
-    {
-      title: "SaaS Dashboard",
-      category: "SaaS",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
-      description: "Analytics dashboard with real-time data visualization"
-    },
-    {
-      title: "Restaurant Website",
-      category: "Hospitality",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop",
-      description: "Online ordering system with table reservations"
-    },
-    {
-      title: "Portfolio Site",
-      category: "Creative",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=300&fit=crop",
-      description: "Creative portfolio showcasing artistic work"
-    },
-    {
-      title: "Tech Startup",
-      category: "Startup",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
-      description: "Landing page optimized for lead generation"
-    }
-  ];
+import { portfolioItems } from "../data/portfolio";
 
-  const categories = ["All", "E-commerce", "Corporate", "SaaS", "Creative", "Startup"];
+const Portfolio = () => {
+  const categories = ["All", ...new Set(portfolioItems.map(item => item.category))];
 
   return (
     <section id="portfolio" className="py-20 bg-white">
@@ -80,7 +43,13 @@ const Portfolio = () => {
         {/* Portfolio Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {portfolioItems.map((item, index) => (
-            <div key={index} className="group cursor-pointer">
+            <a
+              key={index}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group cursor-pointer"
+            >
               <div className="relative overflow-hidden rounded-lg shadow-md">
                 <img
                   src={item.image}
@@ -97,8 +66,9 @@ const Portfolio = () => {
               <div className="mt-4">
                 <span className="text-orange-500 text-sm font-medium">{item.category}</span>
                 <h4 className="text-lg font-semibold text-gray-900 mt-1">{item.title}</h4>
+                <p className="text-sm text-gray-600">{item.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
