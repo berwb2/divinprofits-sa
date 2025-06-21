@@ -9,11 +9,11 @@ export type PortfolioItem = {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: "Blue Oasis Pools",
-    category: "Pool Construction",
-    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
-    url: "#", // Replace with real URL later
-    description: "Modern pool design and construction with premium finishes"
+    title: "Cycling Tom",
+    category: "Bike Hire & Tours",
+    image: "https://cyclingtomtours.com",
+    url: "https://cyclingtomtours.com", // Replace with real URL later
+    description: "Find Your Perfect Ride"
   },
   {
     title: "Aqua Essence Landscaping",
