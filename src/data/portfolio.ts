@@ -11,7 +11,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: "Cycling Tom",
     category: "Bike Hire & Tours",
-    image: "https://cyclingtomtours.com",
+    image: "public/portfolio/CyclingTom.png",
     url: "https://cyclingtomtours.com", // Replace with real URL later
     description: "Find Your Perfect Ride"
   },
