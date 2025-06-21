@@ -4,8 +4,8 @@ import Hero from "../components/Hero";
 import TrustSection from "../components/TrustSection";
 import ServicesSection from "../components/ServicesSection";
 import Process from "../components/Process";
-import PortfolioCarousel from "../components/PortfolioCarousel";
 import VideoShowcase from "../components/VideoShowcase";
+import PortfolioCarousel from "../components/PortfolioCarousel";
 import Testimonials from "../components/Testimonials";
 import AppFooter from "../components/AppFooter";
 
@@ -22,10 +22,10 @@ const Index = () => (
       <ServicesSection />
       {/* 4. How it Works/Process Section */}
       <Process />
-      {/* 5. Portfolio/Our Work Carousel */}
-      <PortfolioCarousel />
-      {/* 6. Video/Showcase Section */}
+      {/* 5. Video/Showcase Section - moved to appear right after Process */}
       <VideoShowcase />
+      {/* 6. Portfolio/Our Work Carousel */}
+      <PortfolioCarousel />
       {/* 7. Client Testimonials */}
       <Testimonials />
     </main>
