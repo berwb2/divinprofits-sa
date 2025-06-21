@@ -13,21 +13,21 @@ const Hero = () => (
 
     <div className="container relative z-10 text-center px-4">
       <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold text-dp-blue-dark mb-6 drop-shadow-sm tracking-tighter leading-tight opacity-0 animate-fade-in">
-        Design Meets
+      Your Website Should Be Working Harder
         <br />
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-dp-blue via-dp-blue-light to-dp-accent">
-          Performance.
+          Than You Are.
         </span>
       </h1>
       <p className="max-w-3xl mx-auto mt-4 text-xl md:text-2xl text-gray-600 font-normal leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-        We are a digital agency that builds stunning, conversion-focused websites with the polish and precision of a top-tier design studio.
+        At Divin Profits, we help brands svcale through smart web design and lead generation. We combine strategy, design, and automation to deliver websites that do the heavy lifting turning browsers into buyers
       </p>
       <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
         <a
           href="#contact"
           className="group inline-flex items-center justify-center px-8 py-4 font-bold text-lg rounded-full bg-dp-blue-dark text-white shadow-lg hover:scale-105 hover:shadow-2xl hover:shadow-dp-blue/30 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-dp-blue/50"
         >
-          <span>Start Your Project</span>
+          <span> Book a call with Ethan</span>
           <MoveRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
         <a
