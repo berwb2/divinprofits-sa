@@ -72,7 +72,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Aspire Companies",
     category: "Spa Services",
     image: "/portfolio/aspirecompanies.png",
-    url: "https;//aspirecompanies.com", // Strategic: proper domain
+    url: "https://aspirecompanies.com", // Strategic: proper domain
     description: "Inspiring & empowring women to lead change in life, work and world.",
     status: "active",
     tags: ["wellness", "maintenance", "custom-spa"],
