@@ -122,7 +122,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Box Office Theory",
     category: "Outdoor Construction",
     image: "/portfolio/boxofficetheory.png",
-    url: "https:/boxofficetheory.com", // Strategic: proper domain
+    url: "https://boxofficetheory.com", // Strategic: proper domain
     description: "Discover how Box Office Theory's comprehensive analysis and forecasting services can help you unlock the full potential of every cinematic release",
     status: "completed",
     tags: ["construction", "weather-resistant", "custom"],
