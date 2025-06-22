@@ -68,12 +68,12 @@ export const portfolioItems: PortfolioItem[] = [
     results: "50+ luxury installations completed"
   },
   {
-    id: "sunrise-spas",
-    title: "Sunrise Spas",
+    id: "aspirecompanies",
+    title: "Aspire Companies",
     category: "Spa Services",
-    image: "https://images.unsplash.com/photo-1455656678494-4d1b5f3e7ad3?w=800&q=80",
-    url: "https://sunrisespas.com", // Strategic: proper domain
-    description: "Custom spa design and maintenance services with wellness focus",
+    image: "/portfolio/aspirecompanies.png",
+    url: "https;//aspirecompanies.com", // Strategic: proper domain
+    description: "Inspiring & empowring women to lead change in life, work and world.",
     status: "active",
     tags: ["wellness", "maintenance", "custom-spa"],
     year: 2024,
@@ -94,36 +94,36 @@ export const portfolioItems: PortfolioItem[] = [
     results: "Winner of Outdoor Living Award 2023"
   },
   {
-    id: "haven-home",
-    title: "Haven Home Services",
+    id: "Be Kept Up",
+    title: "Be Kept Up",
     category: "Home Services",
-    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800&q=80",
-    url: "https://havenhomeservices.com", // Strategic: proper domain
-    description: "Comprehensive home improvement and maintenance with 24/7 support",
+    image: "/portfolio/bekeptup.png",
+    url: "https:/bekeptup-digitalagency.webflow.io", // Strategic: proper domain
+    description: "Are You Ready to Amplify Your Online Presence",
     status: "active",
     tags: ["maintenance", "improvement", "support"],
     year: 2024,
     results: "500+ homes serviced annually"
   },
   {
-    id: "clearview-cleaning",
-    title: "ClearView Pool Cleaning",
+    id: "Epsy",
+    title: "Epsy",
     category: "Pool Maintenance",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80",
-    url: "https://clearviewpoolcleaning.com", // Strategic: proper domain
-    description: "Professional pool cleaning and maintenance services with eco-friendly solutions",
+    image: "/portfolio/epsy.png",
+    url: "https://epsyhealth.com", // Strategic: proper domain
+    description: "You deserve the best epilepsy care",
     status: "active",
     tags: ["eco-friendly", "maintenance", "professional"],
     year: 2024,
     results: "Zero chemical incidents in 3 years"
   },
   {
-    id: "sunset-decks",
-    title: "Sunset Decks & Patios",
+    id: "Box Office Theory",
+    title: "Box Office Theory",
     category: "Outdoor Construction",
-    image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&q=80",
-    url: "https://sunsetdeckspatios.com", // Strategic: proper domain
-    description: "Custom deck and patio construction with weather-resistant materials",
+    image: "/portfolio/boxofficetheory.png",
+    url: "https:/boxofficetheory.com", // Strategic: proper domain
+    description: "Discover how Box Office Theory's comprehensive analysis and forecasting services can help you unlock the full potential of every cinematic release",
     status: "completed",
     tags: ["construction", "weather-resistant", "custom"],
     year: 2023,
@@ -131,10 +131,10 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "thinkbettergroup",
-    title: "thinkbetter",
+    title: "ThinkBetter",
     category: "Pool Construction",
-    image: "https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=800&q=80",
-    url: "https://elitepoolbuilds.com", // Strategic: proper domain
+    image: "/portfolio/thinkbettergroup.png",
+    url: "https://thinkbettergroup.com", // Strategic: proper domain
     description: "Our Brands Elimanate the Need for 760 Tonnes of PLastic a Year",
     featured: true,
     status: "ongoing",
