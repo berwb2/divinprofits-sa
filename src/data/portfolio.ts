@@ -130,12 +130,12 @@ export const portfolioItems: PortfolioItem[] = [
     results: "25-year warranty on all installations"
   },
   {
-    id: "elite-pool-builds",
-    title: "Elite Pool Builds",
+    id: "thinkbettergroup",
+    title: "thinkbetter",
     category: "Pool Construction",
     image: "https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=800&q=80",
     url: "https://elitepoolbuilds.com", // Strategic: proper domain
-    description: "Premium pool construction with custom features and smart technology integration",
+    description: "Our Brands Elimanate the Need for 760 Tonnes of PLastic a Year",
     featured: true,
     status: "ongoing",
     tags: ["premium", "smart-technology", "custom-features"],
