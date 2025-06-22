@@ -20,7 +20,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: "cycling-tom",
     title: "Cycling Tom",
     category: "Bike Hire & Tours",
-    image: "/portfolio/CyclingTom.png", // Fixed: removed 'public' prefix
+    image: "/portfolio/cyclingtom.png", // Fixed: removed 'public' prefix
     url: "https://cyclingtomtours.com",
     description: "Find Your Perfect Ride - Custom bike tour platform with booking system",
     featured: true,
