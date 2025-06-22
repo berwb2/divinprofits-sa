@@ -98,7 +98,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Be Kept Up",
     category: "Home Services",
     image: "/portfolio/bekeptup.png",
-    url: "https:/bekeptup-digitalagency.webflow.io", // Strategic: proper domain
+    url: "https://bekeptup-digitalagency.webflow.io", // Strategic: proper domain
     description: "Are You Ready to Amplify Your Online Presence",
     status: "active",
     tags: ["maintenance", "improvement", "support"],
