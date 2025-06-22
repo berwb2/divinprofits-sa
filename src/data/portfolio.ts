@@ -34,7 +34,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: "with-warmer",
     title: "Warmer",
     category: "Landscaping",
-    image: /portfolio/withwarmer.png",
+    image: "/portfolio/withwarmer.png",
     url: "https://withwarmer.com", // Strategic: proper domain
     description: "Advice when you need it, from people who've lived it",
     featured: true,
