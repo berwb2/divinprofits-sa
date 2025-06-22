@@ -31,12 +31,12 @@ export const portfolioItems: PortfolioItem[] = [
     results: "300% increase in online bookings"
   },
   {
-    id: "aqua-essence",
-    title: "Aqua Essence Landscaping",
+    id: "with-warmer",
+    title: "Warmer",
     category: "Landscaping",
-    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=800&q=80",
-    url: "https://aquaessencelandscaping.com", // Strategic: proper domain
-    description: "Complete outdoor space transformation with water features and sustainable design",
+    image: /portfolio/withwarmer.png",
+    url: "https://withwarmer.com", // Strategic: proper domain
+    description: "Advice when you need it, from people who've lived it",
     featured: true,
     status: "completed",
     tags: ["landscaping", "water-features", "sustainability"],
@@ -44,11 +44,11 @@ export const portfolioItems: PortfolioItem[] = [
     results: "Award-winning sustainable landscape design"
   },
   {
-    id: "palm-paradise",
-    title: "Palm Paradise Pools",
+    id: "pwr-detail",
+    title: "PWR Detail",
     category: "Pool Design",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
-    url: "https://palmparadisepools.com", // Strategic: proper domain
+    image: "/portfolio/pwrdetail.png",
+    url: "https://pwrdetail.com", // Strategic: proper domain
     description: "Luxury resort-style pool design and installation with smart automation",
     status: "completed",
     tags: ["luxury", "smart-pools", "automation"],
@@ -56,12 +56,12 @@ export const portfolioItems: PortfolioItem[] = [
     results: "Featured in Pool & Spa Magazine"
   },
   {
-    id: "prestige-pools",
-    title: "Prestige Pools & Spas",
+    id: "thomasirwin",
+    title: "thomasirwin",
     category: "Pool & Spa",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80",
-    url: "https://prestigepoolsspas.com", // Strategic: proper domain
-    description: "High-end pool and spa combination projects with therapeutic features",
+    image: "/portfolio/thomasirwin.png",
+    url: "https://thomasirwin.com", // Strategic: proper domain
+    description: "Expert Non-profit Accounting, Bookkeeping and & Payroll Services",
     status: "ongoing",
     tags: ["luxury", "therapeutic", "custom-design"],
     year: 2024,
@@ -80,12 +80,12 @@ export const portfolioItems: PortfolioItem[] = [
     results: "98% customer satisfaction rate"
   },
   {
-    id: "backyard-living",
-    title: "Backyard Living Co.",
+    id: "shOUter",
+    title: "shOUter",
     category: "Outdoor Living",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
-    url: "https://backyardlivingco.com", // Strategic: proper domain
-    description: "Complete backyard transformation and living spaces with entertainment focus",
+    image: "/portfolio/shouter.png",
+    url: "https://shouter.app", // Strategic: proper domain
+    description: "Care for your home",
     featured: true,
     status: "completed",
     tags: ["entertainment", "transformation", "outdoor-living"],
