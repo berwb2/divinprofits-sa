@@ -7,6 +7,7 @@ import Process from "../components/Process";
 import VideoShowcase from "../components/VideoShowcase";
 import PortfolioCarousel from "../components/PortfolioCarousel";
 import Testimonials from "../components/Testimonials";
+import ContactSection from "../components/ContactSection";
 import AppFooter from "../components/AppFooter";
 
 // The landing page is restructured to match the uploaded wireframe layout and order.
@@ -28,8 +29,10 @@ const Index = () => (
       <PortfolioCarousel />
       {/* 7. Client Testimonials */}
       <Testimonials />
+      {/* 8. Contact Section */}
+      <ContactSection />
     </main>
-    {/* 8. Footer/End Banner */}
+    {/* 9. Footer/End Banner */}
     <AppFooter />
   </div>
 );
