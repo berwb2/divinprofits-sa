@@ -78,7 +78,7 @@ const AppHeader = () => {
               onClick={() => handleNavClick('#contact')}
               className="bg-dp-blue text-white px-7 py-3 mt-2 rounded-lg font-bold shadow-md border-2 border-dp-blue-light transition-transform duration-150 hover:scale-105 text-base w-full text-center"
             >
-              Get a Quote
+              Book A Call
             </button>
           </nav>
         </div>
