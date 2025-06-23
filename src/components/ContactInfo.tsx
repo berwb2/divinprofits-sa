@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Mail, Phone, Calendar, MapPin, Star, Users, Clock, Shield } from "lucide-react";
 
@@ -68,7 +69,7 @@ const ContactInfo = () => {
               key={index}
               className="group flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02]"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-dp-accent to-dp-orange rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform text-white">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform text-white">
                 {method.icon}
               </div>
               <div className="flex-1">
@@ -89,7 +90,7 @@ const ContactInfo = () => {
               key={index}
               className="text-center p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
             >
-              <div className="flex justify-center mb-2 text-dp-accent">
+              <div className="flex justify-center mb-2 text-blue-400">
                 {badge.icon}
               </div>
               <div className="text-white font-bold text-xl">
@@ -104,7 +105,7 @@ const ContactInfo = () => {
 
         {/* Security Assurance */}
         <div className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
-          <Shield size={20} className="text-dp-accent" />
+          <Shield size={20} className="text-blue-400" />
           <div className="text-sm text-white/80">
             <span className="font-semibold">100% Secure & Confidential</span>
             <br />

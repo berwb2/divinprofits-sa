@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { ArrowRight, ArrowLeft, Phone, CheckCircle } from "lucide-react";
 import { Button } from "./ui/button";
@@ -145,7 +146,7 @@ const ContactForm = () => {
               <div
                 className={`w-full h-2 rounded-full transition-all duration-300 ${
                   step <= currentStep
-                    ? 'bg-gradient-to-r from-dp-accent to-dp-orange'
+                    ? 'bg-gradient-to-r from-blue-500 to-blue-600'
                     : 'bg-white/20'
                 }`}
               />
@@ -172,7 +173,7 @@ const ContactForm = () => {
                 type="text"
                 value={formData.name}
                 onChange={(e) => updateFormData('name', e.target.value)}
-                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-dp-accent focus:ring-dp-accent/50"
+                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-blue-500 focus:ring-blue-500/50"
                 placeholder="Enter your full name"
                 required
               />
@@ -188,7 +189,7 @@ const ContactForm = () => {
                 type="email"
                 value={formData.email}
                 onChange={(e) => updateFormData('email', e.target.value)}
-                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-dp-accent focus:ring-dp-accent/50"
+                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-blue-500 focus:ring-blue-500/50"
                 placeholder="your@email.com"
                 required
               />
@@ -204,7 +205,7 @@ const ContactForm = () => {
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => updateFormData('phone', e.target.value)}
-                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-dp-accent focus:ring-dp-accent/50"
+                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-blue-500 focus:ring-blue-500/50"
                 placeholder="+1 (555) 123-4567"
               />
             </div>
@@ -223,7 +224,7 @@ const ContactForm = () => {
                 type="text"
                 value={formData.businessName}
                 onChange={(e) => updateFormData('businessName', e.target.value)}
-                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-dp-accent focus:ring-dp-accent/50"
+                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-blue-500 focus:ring-blue-500/50"
                 placeholder="Your business name"
               />
             </div>
@@ -236,7 +237,7 @@ const ContactForm = () => {
                 id="projectType"
                 value={formData.projectType}
                 onChange={(e) => updateFormData('projectType', e.target.value)}
-                className="w-full px-3 py-2 bg-white/5 border border-white/20 text-white rounded-md focus:border-dp-accent focus:ring-dp-accent/50 focus:outline-none"
+                className="w-full px-3 py-2 bg-white/5 border border-white/20 text-white rounded-md focus:border-blue-500 focus:ring-blue-500/50 focus:outline-none"
                 required
               >
                 <option value="" className="text-gray-900">Select a project type</option>
@@ -257,7 +258,7 @@ const ContactForm = () => {
                 id="budget"
                 value={formData.budget}
                 onChange={(e) => updateFormData('budget', e.target.value)}
-                className="w-full px-3 py-2 bg-white/5 border border-white/20 text-white rounded-md focus:border-dp-accent focus:ring-dp-accent/50 focus:outline-none"
+                className="w-full px-3 py-2 bg-white/5 border border-white/20 text-white rounded-md focus:border-blue-500 focus:ring-blue-500/50 focus:outline-none"
               >
                 <option value="" className="text-gray-900">Select budget range</option>
                 {budgetRanges.map((range) => (
@@ -281,7 +282,7 @@ const ContactForm = () => {
                 id="goals"
                 value={formData.goals}
                 onChange={(e) => updateFormData('goals', e.target.value)}
-                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-dp-accent focus:ring-dp-accent/50 min-h-[120px]"
+                className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-blue-500 focus:ring-blue-500/50 min-h-[120px]"
                 placeholder="What are you hoping to achieve? Any specific challenges or goals you'd like to discuss?"
                 rows={4}
                 maxLength={500}
@@ -313,7 +314,7 @@ const ContactForm = () => {
             <Button
               type="button"
               onClick={nextStep}
-              className="bg-gradient-to-r from-dp-accent to-dp-orange hover:from-dp-accent/90 hover:to-dp-orange/90 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
             >
               Next Step
               <ArrowRight size={16} />
@@ -322,7 +323,7 @@ const ContactForm = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-gradient-to-r from-dp-accent to-dp-orange hover:from-dp-accent/90 hover:to-dp-orange/90 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Submitting..." : "Book My Free Session"}
               <ArrowRight size={16} />
