@@ -6,12 +6,12 @@ const steps = [
   {
     icon: <Search className="w-8 h-8" />,
     title: "1. Discovery & Strategy",
-    description: "We dive deep into your market, audience, and goals to build a winning strategy from the ground up."
+    description: "We dive deep into your South African market, audience, and goals to build a winning strategy from the ground up."
   },
   {
     icon: <PenTool className="w-8 h-8" />,
     title: "2. Design & Development",
-    description: "Our team designs and engineers a pixel-perfect, high-performance website that captivates and converts."
+    description: "Our team designs and engineers a pixel-perfect, high-performance website that captivates and converts in the SA market."
   },
   {
     icon: <Rocket className="w-8 h-8" />,
@@ -29,8 +29,7 @@ const Process = () => {
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">From concept to launch, we follow a proven path to digital excellence.</p>
         </div>
         <div className="relative">
-          {/* Connecting Line */}
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200/80 -translate-y-1/2" />
+          {/* Removed the connecting line that was cutting through elements */}
           
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12">
             {steps.map((step, index) => (

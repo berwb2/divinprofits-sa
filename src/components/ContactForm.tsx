@@ -33,7 +33,7 @@ const ContactForm = () => {
 
   const projectTypes = [
     "New Website Design",
-    "Website Redesign",
+    "Website Redesign", 
     "Sales Funnel",
     "Landing Page",
     "Lead Generation System",
@@ -42,10 +42,10 @@ const ContactForm = () => {
   ];
 
   const budgetRanges = [
-    "$2,500 - $5,000",
-    "$5,000 - $10,000",
-    "$10,000 - $20,000",
-    "$20,000+",
+    "R 15,000 - R 30,000",
+    "R 30,000 - R 60,000", 
+    "R 60,000 - R 120,000",
+    "R 120,000+",
     "Let's Discuss"
   ];
 
@@ -102,7 +102,18 @@ const ContactForm = () => {
 
     setIsSubmitting(true);
     
-    // Simulate API call
+    // Backend-agnostic form submission structure
+    const submissionData = {
+      ...formData,
+      timestamp: new Date().toISOString(),
+      source: 'website',
+      currency: 'ZAR',
+      timezone: 'Africa/Johannesburg'
+    };
+    
+    console.log('Form submission data:', submissionData);
+    
+    // Simulate API call - ready for Supabase/Calendly integration
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
@@ -206,7 +217,7 @@ const ContactForm = () => {
                 value={formData.phone}
                 onChange={(e) => updateFormData('phone', e.target.value)}
                 className="bg-white/5 border-white/20 text-white placeholder:text-white/50 focus:border-blue-500 focus:ring-blue-500/50"
-                placeholder="+1 (555) 123-4567"
+                placeholder="+27 11 123 4567"
               />
             </div>
           </div>
@@ -332,12 +343,12 @@ const ContactForm = () => {
         </div>
       </form>
 
-      {/* Alternative Contact */}
+      {/* Alternative Contact - Fixed visibility */}
       <div className="mt-8 pt-6 border-t border-white/20 text-center">
         <p className="text-white/70 text-sm mb-4">Prefer to talk directly?</p>
         <Button
           variant="outline"
-          className="border-white/20 text-white hover:bg-white/10 flex items-center gap-2 mx-auto"
+          className="border-dp-blue bg-dp-blue text-white hover:bg-dp-blue-dark hover:border-dp-blue-dark flex items-center gap-2 mx-auto transition-all duration-300"
         >
           <Phone size={16} />
           Call Ethan Now

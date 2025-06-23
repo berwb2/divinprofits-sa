@@ -13,8 +13,8 @@ const ContactInfo = () => {
     {
       icon: <Phone size={24} />,
       label: "Direct Line",
-      value: "+1 (555) 123-4567",
-      detail: "Available 9 AM - 6 PM EST"
+      value: "+27 11 123 4567",
+      detail: "Available 9 AM - 6 PM SAST"
     },
     {
       icon: <Calendar size={24} />,
@@ -25,7 +25,7 @@ const ContactInfo = () => {
     {
       icon: <MapPin size={24} />,
       label: "Time Zone",
-      value: "EST Business Hours",
+      value: "SAST Business Hours",
       detail: "Quick response guaranteed"
     }
   ];
@@ -34,7 +34,7 @@ const ContactInfo = () => {
     {
       icon: <Users size={20} />,
       count: "100+",
-      label: "Happy Clients"
+      label: "Happy SA Clients"
     },
     {
       icon: <Star size={20} />,
@@ -57,7 +57,7 @@ const ContactInfo = () => {
             Let's Start Your Success Story
           </h3>
           <p className="text-white/80 text-lg leading-relaxed">
-            Join businesses that have transformed their online presence and saw real growth. 
+            Join South African businesses that have transformed their online presence and saw real growth. 
             Your free consultation is just one step away.
           </p>
         </div>

@@ -16,19 +16,27 @@ const Index = () => (
     <AppHeader />
     <main>
       {/* 1. Hero Section */}
-      <Hero />
+      <section id="home">
+        <Hero />
+      </section>
       {/* 2. Trust/Logo Bar - brand/partner logos */}
       <TrustSection />
       {/* 3. Value Proposition 3-feature Section */}
-      <ServicesSection />
+      <section id="services">
+        <ServicesSection />
+      </section>
       {/* 4. How it Works/Process Section */}
       <Process />
       {/* 5. Video/Showcase Section - moved to appear right after Process */}
       <VideoShowcase />
       {/* 6. Portfolio/Our Work Carousel */}
-      <PortfolioCarousel />
+      <section id="portfolio">
+        <PortfolioCarousel />
+      </section>
       {/* 7. Client Testimonials */}
-      <Testimonials />
+      <section id="clients">
+        <Testimonials />
+      </section>
       {/* 8. Contact Section */}
       <ContactSection />
     </main>
