@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Mail, Phone, Calendar, MapPin, ArrowRight, Star, Users, Clock } from "lucide-react";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";

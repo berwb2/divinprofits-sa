@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Mail, Phone, Calendar, MapPin, Star, Users, Clock, Shield } from "lucide-react";
 
 const ContactInfo = () => {
