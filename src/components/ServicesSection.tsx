@@ -68,7 +68,7 @@ const ServicesSection = () => (
               {service.desc}
             </p>
             
-            <div className="space-y-2 mb-6">
+            <div className="space-y-2">
               {service.subServices.map((subService, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-dp-blue rounded-full"></div>
@@ -76,17 +76,15 @@ const ServicesSection = () => (
                 </div>
               ))}
             </div>
-            
-            <button className="w-full bg-gradient-to-r from-dp-blue-light to-dp-blue text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-xl">
-              Book a Call with Ethan
-            </button>
           </div>
         ))}
       </div>
       
       <div className="text-center">
         <a
-          href="#contact"
+          href="https://calendly.com/ethanwilliams083"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-gradient-to-r from-dp-blue-light to-dp-blue text-white px-10 py-5 rounded-full font-bold shadow-glass hover:scale-105 transition-all duration-300 text-lg hover:shadow-2xl"
         >
           <span>Ready to Grow Your Business?</span>

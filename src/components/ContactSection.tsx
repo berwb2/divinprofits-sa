@@ -1,8 +1,6 @@
 
-import React, { useState, useEffect } from "react";
-import { Mail, Phone, Calendar, MapPin, ArrowRight, Star, Users, Clock } from "lucide-react";
-import ContactForm from "./ContactForm";
-import ContactInfo from "./ContactInfo";
+import React from "react";
+import { Calendar, ArrowRight } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -31,9 +29,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        {/* Pre-Contact Message */}
+        {/* Main CTA Section */}
         <div className="text-center mb-12 animate-fade-in">
-          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-2xl">
+          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-12 shadow-2xl">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               You Can Stop Wasting Time Now
             </h3>
@@ -51,19 +49,20 @@ const ContactSection = () => {
                 <div className="text-2xl font-bold text-blue-400 mb-2">No fluff. Just growth.</div>
               </div>
             </div>
-            <p className="text-lg text-white/80 mb-6">
+            <p className="text-lg text-white/80 mb-8">
               Let's get you started today
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl">
-              Book a Call with Ethan
-            </button>
+            <a
+              href="https://calendly.com/ethanwilliams083"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-12 py-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl text-lg"
+            >
+              <Calendar size={24} />
+              Book Your Free Strategy Session
+              <ArrowRight size={20} />
+            </a>
           </div>
-        </div>
-
-        {/* Contact Cards Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          <ContactInfo />
-          <ContactForm />
         </div>
       </div>
     </section>
