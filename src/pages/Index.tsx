@@ -5,6 +5,7 @@ import ServicesSection from "../components/ServicesSection";
 import Process from "../components/Process";
 import VideoShowcase from "../components/VideoShowcase";
 import PortfolioCarousel from "../components/PortfolioCarousel";
+import InfiniteScrollPortfolio from "../components/InfiniteScrollPortfolio";
 import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import AppFooter from "../components/AppFooter";
@@ -30,6 +31,8 @@ const Index = () => (
       <section id="portfolio">
         <PortfolioCarousel />
       </section>
+      {/* 5.5. Infinite Scroll Portfolio */}
+      <InfiniteScrollPortfolio />
       {/* 6. Client Testimonials */}
       <section id="clients">
         <Testimonials />
