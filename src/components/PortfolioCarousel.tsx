@@ -34,6 +34,10 @@ const PortfolioCarousel = () => {
   // Auto-advance, but pause on hover
   const [isHovered, setIsHovered] = React.useState(false);
 
+  // Touch/swipe support for mobile
+  const [touchStart, setTouchStart] = React.useState(null);
+  const [touchEnd, setTouchEnd] = React.useState(null);
+
   React.useEffect(() => {
     if (isHovered) return; // pause when user hovers
     const timer = setInterval(() => setPageIdx(i => (i + 1) % totalPages), AUTO_ADVANCE_MS);
@@ -42,6 +46,26 @@ const PortfolioCarousel = () => {
 
   const handlePrev = () => setPageIdx(i => (i - 1 + totalPages) % totalPages);
   const handleNext = () => setPageIdx(i => (i + 1) % totalPages);
+
+  // Touch handlers
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+    
+    if (isLeftSwipe) handleNext();
+    if (isRightSwipe) handlePrev();
+  };
 
   // Slice grid data for the current 'slide'
   const start = pageIdx * sitesPerPage;
@@ -69,22 +93,26 @@ const PortfolioCarousel = () => {
         className="relative w-full max-w-6xl px-4 sm:px-8"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
-        {/* Nav Arrows (desktop) */}
+        {/* Navigation Arrows - Now visible on all devices with proper positioning */}
         <button
-          className="hidden md:flex absolute z-20 left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white shadow-xl border border-gray-200 hover:bg-blue-50 transition-all active:scale-90"
+          className="absolute z-20 left-2 sm:left-4 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white shadow-xl border border-gray-200 hover:bg-blue-50 transition-all active:scale-90 flex items-center justify-center"
           onClick={handlePrev}
           aria-label="Previous"
         >
-          <ChevronLeft size={32} className="text-dp-blue" />
+          <ChevronLeft size={20} className="text-dp-blue sm:w-6 sm:h-6" />
         </button>
         <button
-          className="hidden md:flex absolute z-20 right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white shadow-xl border border-gray-200 hover:bg-blue-50 transition-all active:scale-90"
+          className="absolute z-20 right-2 sm:right-4 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white shadow-xl border border-gray-200 hover:bg-blue-50 transition-all active:scale-90 flex items-center justify-center"
           onClick={handleNext}
           aria-label="Next"
         >
-          <ChevronRight size={32} className="text-dp-blue" />
+          <ChevronRight size={20} className="text-dp-blue sm:w-6 sm:h-6" />
         </button>
+        
         {/* Cool Glassy Grid */}
         <div
           className="grid gap-8 md:gap-10 transition-all duration-500 ease-in-out animate-fade-in"
