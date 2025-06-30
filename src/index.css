@@ -115,7 +115,7 @@
 }
 .pulse { animation: pulse 1.8s cubic-bezier(.4,0,.6,1) infinite; }
 
-/* Infinite scroll animation */
+/* Optimized infinite scroll animation for WebP images */
 @keyframes infinite-scroll {
   from {
     transform: translateX(0);
@@ -126,11 +126,30 @@
 }
 
 .animate-infinite-scroll {
-  animation: infinite-scroll 20s linear infinite;
+  animation: infinite-scroll 40s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .animate-infinite-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Optimize WebP image rendering */
+.animate-infinite-scroll img,
+.animate-infinite-scroll picture {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Ensure smooth scrolling performance */
+.animate-infinite-scroll {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /* Expansive boxed section backgrounds and accent border styles for Figma-style look */
