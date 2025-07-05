@@ -141,6 +141,72 @@ export const portfolioItems: PortfolioItem[] = [
     tags: ["premium", "smart-technology", "custom-features"],
     year: 2024,
     results: "$2M+ in luxury pool projects completed"
+  },
+  {
+    id: "monkeytail-agency",
+    title: "Monkeytail Agency",
+    category: "Digital Agency",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    url: "https://monkeytail-agency.webflow.io",
+    description: "Creative digital agency specializing in modern web solutions",
+    status: "active",
+    tags: ["digital", "creative", "webflow"],
+    year: 2024
+  },
+  {
+    id: "mema-consultants",
+    title: "MEMA Consultants",
+    category: "Consulting",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80",
+    url: "https://memaconsultants.webflow.io",
+    description: "Professional consulting services for business growth and strategy",
+    status: "active",
+    tags: ["consulting", "business", "strategy"],
+    year: 2024
+  },
+  {
+    id: "planetary-stellar",
+    title: "Planetary Stellar",
+    category: "Technology",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+    url: "https://planetarys-stellar-site.webflow.io",
+    description: "Innovative technology solutions for the space industry",
+    status: "active",
+    tags: ["technology", "space", "innovation"],
+    year: 2024
+  },
+  {
+    id: "agentc-marketing",
+    title: "Agent C Marketing",
+    category: "Marketing Agency",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+    url: "https://agentcmarketing.co",
+    description: "Full-service marketing agency driving results for businesses",
+    status: "active",
+    tags: ["marketing", "agency", "digital-marketing"],
+    year: 2024
+  },
+  {
+    id: "vista-dental",
+    title: "Vista Dental Implants",
+    category: "Healthcare",
+    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
+    url: "https://vistadentalimplants.com",
+    description: "Advanced dental implant services with cutting-edge technology",
+    status: "active",
+    tags: ["healthcare", "dental", "medical"],
+    year: 2024
+  },
+  {
+    id: "akel-entertainment",
+    title: "Akel Entertainment",
+    category: "Entertainment",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
+    url: "https://akeldentertainment.com",
+    description: "Premier entertainment services and event management",
+    status: "active",
+    tags: ["entertainment", "events", "music"],
+    year: 2024
   }
 ];
 
