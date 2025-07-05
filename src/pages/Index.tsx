@@ -19,10 +19,10 @@ const Index = () => (
       <section id="home">
         <Hero />
       </section>
-      {/* 2. Video/Showcase Section - moved to appear right after Hero */}
-      <VideoShowcase />
-      {/* 3. Infinite Scroll Portfolio - moved to appear after Video */}
+      {/* 2. Trusted By Over - moved to appear before Video section */}
       <InfiniteScrollPortfolio />
+      {/* 3. Video/Showcase Section - See Us In Action */}
+      <VideoShowcase />
       {/* 4. Value Proposition 3-feature Section */}
       <section id="services">
         <ServicesSection />
