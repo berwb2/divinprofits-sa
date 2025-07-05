@@ -21,18 +21,18 @@ const Index = () => (
       </section>
       {/* 2. Video/Showcase Section - moved to appear right after Hero */}
       <VideoShowcase />
-      {/* 3. Portfolio/Our Work Carousel - moved to appear after Video */}
-      <section id="portfolio">
-        <PortfolioCarousel />
-      </section>
-      {/* 4. Infinite Scroll Portfolio - moved to appear after Portfolio Carousel */}
+      {/* 3. Infinite Scroll Portfolio - moved to appear after Video */}
       <InfiniteScrollPortfolio />
-      {/* 5. Value Proposition 3-feature Section */}
+      {/* 4. Value Proposition 3-feature Section */}
       <section id="services">
         <ServicesSection />
       </section>
-      {/* 6. How it Works/Process Section */}
+      {/* 5. How it Works/Process Section */}
       <Process />
+      {/* 6. Check Out Our Work - moved to appear before testimonials */}
+      <section id="portfolio">
+        <PortfolioCarousel />
+      </section>
       {/* 7. Client Testimonials */}
       <section id="clients">
         <Testimonials />
