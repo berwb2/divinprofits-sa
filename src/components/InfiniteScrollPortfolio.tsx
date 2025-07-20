@@ -1,9 +1,9 @@
 
-import { portfolioItems } from "../data/portfolio";
+import { logoItems } from "../data/logos";
 
 const InfiniteScrollPortfolio = () => {
-  // Duplicate the portfolio items to create seamless infinite scroll
-  const duplicatedItems = [...portfolioItems, ...portfolioItems];
+  // Duplicate the logo items to create seamless infinite scroll
+  const duplicatedItems = [...logoItems, ...logoItems];
 
   return (
     <section className="py-16 bg-gray-50 overflow-hidden">
@@ -19,32 +19,16 @@ const InfiniteScrollPortfolio = () => {
           {duplicatedItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
-              className="flex-shrink-0 w-80 h-48 relative group cursor-pointer"
+              className="flex-shrink-0 w-48 h-32 relative group cursor-pointer"
             >
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full h-full"
-              >
-                <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    draggable={false}
-                  />
-                  
-                  {/* Overlay with project info */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
-                    <div className="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                      <p className="text-sm text-gray-200 mb-2">{item.category}</p>
-                      <p className="text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
+              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white p-4 flex items-center justify-center">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="max-w-full max-h-full object-contain filter grayscale brightness-75 contrast-105 hover:grayscale-0 hover:brightness-100 transition-all duration-300"
+                  draggable={false}
+                />
+              </div>
             </div>
           ))}
         </div>
