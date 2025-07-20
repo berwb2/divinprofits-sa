@@ -1,34 +1,33 @@
-
-import { Globe, TrendingUp, Target, Users } from "lucide-react";
+import { Globe, TrendingUp, Target, Settings } from "lucide-react";
 
 const services = [
   {
     icon: <Globe size={28} />,
     title: "Custom Digital Assets That Sell",
     category: "Website Solutions",
-    desc: "We don't just build websites; we build digital assets that sell. Your site should convert, not just look pretty. We design high-performing websites that turn traffic into leads, reflect your brand, and lead visitors through a seamless journey to maximize conversions.",
+    desc: "We don't just build websites; we build digital assets that convert. Your site should perform, not just look good. We design high-impact websites that reflect your brand, turn traffic into leads, and guide visitors through a seamless journey to maximize conversions.",
     subServices: ["Custom Web Design", "Strategy, Copywriting & SEO-Ready", "Built for Speed, Style & Scale"]
   },
   {
     icon: <TrendingUp size={28} />,
     title: "Strategic Sales Funnels That Convert",
     category: "Funnel Systems",
-    desc: "We turn visitors into clients with funnels that do the heavy lifting. From first impression to final call to action, our funnels guide visitors through a seamless journey. We craft each step to maximize conversions and close prospects faster online.",
+    desc: "We design funnels that guide visitors from first impression to final action. Each step is crafted to close prospects faster and automate your online sales process.",
     subServices: ["Sales Pages & Squeeze Pages", "Email Capture & Follow-Up Plans", "Conversion Optimization"]
   },
   {
     icon: <Target size={28} />,
-    title: "Landing Pages That Convert",
-    category: "Lead Generation",
-    desc: "High-converting landing pages designed to capture qualified leads. Every element is strategically placed to guide visitors toward taking action, whether that's downloading a lead magnet or booking a consultation call.",
-    subServices: ["Sales Pages & Squeeze Pages", "Email Capture & Follow-Up Plans", "A/B Testing & Optimization"]
+    title: "Predictable Prospecting That Scales",
+    category: "Lead Generation Systems",
+    desc: "We build lead-gen systems that consistently attract qualified prospects. From landing pages to lead magnets to automated follow-up, every piece is engineered for performance and repeatability.",
+    subServices: ["Offer & CTA Strategy", "Lead Magnets & Opt-In Design", "Email Marketing & Nurture Campaigns", "A/B Testing & Optimization"]
   },
   {
-    icon: <Users size={28} />,
-    title: "Attract the Right Prospects Consistently",
-    category: "Lead Generation Strategy",
-    desc: "We help you attract the right people consistently. No more hoping for word of mouth or random organic traffic. We build lead-gen systems that put qualified prospects on repeat — with positioning, strategy, and follow-up plans.",
-    subServices: ["Offer & CTA Strategy", "Lead Magnets & Opt-In Design", "Email Marketing & Follow-Up Campaigns"]
+    icon: <Settings size={28} />,
+    title: "Long-Term Growth with Continuous Improvement",
+    category: "Optimization & Support",
+    desc: "We don't vanish after launch. We monitor, test, and refine your digital systems to keep them sharp. More traffic. Better leads. Higher conversions, month after month.",
+    subServices: ["Launch Performance Monitoring", "UX and Conversion Audits", "Monthly A/B Testing & Reporting", "Technical Support & Site Maintenance"]
   },
 ];
 
