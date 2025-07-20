@@ -46,7 +46,7 @@ const InfiniteScrollPortfolio = () => {
                     console.error(`Failed to load image: ${item.image}`);
                     console.log(`Image path attempted: ${item.image}`);
                     // Fallback to a placeholder
-                    e.currentTarget.src = `https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop&crop=center`;
+                    e.currentTarget.src = ``;
                   }}
                   onLoad={() => {
                     console.log(`Successfully loaded: ${item.image}`);
