@@ -2,6 +2,11 @@
 import { logoItems } from "../data/logos";
 
 const InfiniteScrollPortfolio = () => {
+  // Calculate animation duration based on number of logos
+  // Each logo should be visible for ~3 seconds, with smooth scrolling
+  const logoCount = logoItems.length;
+  const animationDuration = logoCount * 3; // 3 seconds per logo
+  
   // Duplicate the logo items to create seamless infinite scroll
   const duplicatedItems = [...logoItems, ...logoItems];
 
@@ -15,7 +20,12 @@ const InfiniteScrollPortfolio = () => {
       
       <div className="relative">
         {/* Main scrolling container */}
-        <div className="flex animate-infinite-scroll gap-6">
+        <div 
+          className="flex animate-infinite-scroll gap-6"
+          style={{
+            animationDuration: `${animationDuration}s`
+          }}
+        >
           {duplicatedItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
