@@ -165,12 +165,12 @@ export const portfolioItems: PortfolioItem[] = [
     year: 2024
   },
   {
-    id: "planetary-stellar",
+    id: "planetary22",
     title: "Planetary Stellar",
     category: "Space Technology",
     image: "/portfolio/planetary22.png",
     url: "https://planetarys-stellar-site.webflow.io",
-    description: "Innovative technology solutions for the space industry",
+    description: "Planetary is redefining the digital landscape, creating a metaverse where immersive gaming and social connectivity converge. Our mission is to bridge the virtual with the real, offering unique experiences for users and brands alike.",
     status: "active",
     tags: ["technology", "space", "innovation"],
     year: 2024
