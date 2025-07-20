@@ -7,6 +7,11 @@ const InfiniteScrollPortfolio = () => {
   const logoCount = logoItems.length;
   const animationDuration = logoCount * 3; // 3 seconds per logo
   
+  // Debug logging
+  console.log('Total logos:', logoCount);
+  console.log('Animation duration:', animationDuration + 's');
+  console.log('Logo paths:', logoItems.map(item => item.image));
+  
   // Duplicate the logo items to create seamless infinite scroll
   const duplicatedItems = [...logoItems, ...logoItems];
 
@@ -37,6 +42,15 @@ const InfiniteScrollPortfolio = () => {
                   alt={item.alt}
                   className="max-w-full max-h-full object-contain filter grayscale brightness-75 contrast-105 hover:grayscale-0 hover:brightness-100 transition-all duration-300"
                   draggable={false}
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${item.image}`);
+                    console.log(`Image path attempted: ${item.image}`);
+                    // Fallback to a placeholder
+                    e.currentTarget.src = `https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop&crop=center`;
+                  }}
+                  onLoad={() => {
+                    console.log(`Successfully loaded: ${item.image}`);
+                  }}
                 />
               </div>
             </div>
