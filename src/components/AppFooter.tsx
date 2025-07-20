@@ -7,7 +7,7 @@ const AppFooter = () => (
           <span className="font-display font-bold text-2xl text-white">Divin-Profits</span>
         </div>
         <p className="mb-0 text-dp-blue-light text-base">
-          Creating premium websites that drive profit—for businesses who demand results.
+          Creating premium websites that drive profit for businesses who demand results.
         </p>
       </div>
       <div className="flex flex-col md:flex-row gap-6 items-center">
