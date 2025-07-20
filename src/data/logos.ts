@@ -18,13 +18,13 @@ export const logoItems: LogoItem[] = [
     id: "colored-logo-1",
     name: "Colored Logo",
     image: "/logos/650041511a2cfcc288fc52af_colored logo.png",
-    alt: "Colored logo"
+    alt: ""
   },
   {
     id: "brand-logo-1",
     name: "Brand Logo",
     image: "/logos/65153b5d01897d1fe306e882_image 1.webp",
-    alt: "Brand logo"
+    alt: ""
   },
   {
     id: "agent-c",
@@ -42,13 +42,13 @@ export const logoItems: LogoItem[] = [
     id: "company-logo-1",
     name: "Company Logo",
     image: "/logos/666bcdb8e8bcdff028078ab7_290976955_436445728339805_6458611427246148062_n.webp",
-    alt: "Company logo"
+    alt: ""
   },
   {
     id: "brand-logo-2",
     name: "Brand Logo",
     image: "/logos/66c5cb6277cd3bc3c2f153ee_logo.svg",
-    alt: "Brand logo"
+    alt: ""
   },
   {
     id: "cycling-tom",
@@ -60,25 +60,25 @@ export const logoItems: LogoItem[] = [
     id: "colored-logo-2",
     name: "Colored Logo",
     image: "/logos/679b1c2c15531716e73afc5c_Logo Colored.avif",
-    alt: "Colored logo"
+    alt: ""
   },
   {
     id: "asset-1",
     name: "Asset 1",
     image: "/logos/Asset-1.svg",
-    alt: "Asset 1 logo"
+    alt: ""
   },
   {
     id: "group-148",
     name: "Group 148",
     image: "/logos/Group-148.svg",
-    alt: "Group 148 logo"
+    alt: ""
   },
   {
     id: "livello-1",
     name: "Livello 1",
     image: "/logos/Livello-1.svg",
-    alt: "Livello 1 logo"
+    alt: ""
   },
   {
     id: "akeld",
