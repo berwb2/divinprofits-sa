@@ -19,8 +19,8 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "cycling-tom",
     title: "Cycling Tom",
-    category: "Bike Hire & Tours",
-    image: "/portfolio/cyclingtom.png", // Fixed: removed 'public' prefix
+    category: "Tourism & Recreation",
+    image: "/portfolio/cyclingtom.png",
     url: "https://cyclingtomtours.com",
     description: "Find Your Perfect Ride - Custom bike tour platform with booking system",
     featured: true,
@@ -35,7 +35,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Warmer",
     category: "Landscaping",
     image: "/portfolio/withwarmer.png",
-    url: "https://withwarmer.com", // Strategic: proper domain
+    url: "https://withwarmer.com",
     description: "Advice when you need it, from people who've lived it",
     featured: true,
     status: "completed",
@@ -46,107 +46,107 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "pwr-detail",
     title: "PWR Detail",
-    category: "Pool Design",
+    category: "Automotive Services",
     image: "/portfolio/pwrdetail.png",
-    url: "https://pwrdetail.com", // Strategic: proper domain
-    description: "Luxury resort-style pool design and installation with smart automation",
+    url: "https://pwrdetail.com",
+    description: "Professional automotive detailing services with premium care and attention",
     status: "completed",
-    tags: ["luxury", "smart-pools", "automation"],
+    tags: ["automotive", "detailing", "premium-service"],
     year: 2023,
-    results: "Featured in Pool & Spa Magazine"
+    results: "Featured in Auto Care Magazine"
   },
   {
     id: "thomasirwin",
-    title: "thomasirwin",
-    category: "Pool & Spa",
+    title: "Thomas Irwin",
+    category: "Professional Services",
     image: "/portfolio/thomasirwin.png",
-    url: "https://thomasirwin.com", // Strategic: proper domain
-    description: "Expert Non-profit Accounting, Bookkeeping and & Payroll Services",
+    url: "https://thomasirwin.com",
+    description: "Expert Non-profit Accounting, Bookkeeping and Payroll Services",
     status: "ongoing",
-    tags: ["luxury", "therapeutic", "custom-design"],
+    tags: ["accounting", "non-profit", "professional-services"],
     year: 2024,
-    results: "50+ luxury installations completed"
+    results: "50+ non-profit organizations served"
   },
   {
     id: "aspirecompanies",
     title: "Aspire Companies",
-    category: "Spa Services",
+    category: "Professional Development",
     image: "/portfolio/aspirecompanies.png",
-    url: "https://aspirecompanies.com", // Strategic: proper domain
-    description: "Inspiring & empowring women to lead change in life, work and world.",
+    url: "https://aspirecompanies.com",
+    description: "Inspiring & empowering women to lead change in life, work and world",
     status: "active",
-    tags: ["wellness", "maintenance", "custom-spa"],
+    tags: ["leadership", "empowerment", "professional-development"],
     year: 2024,
-    results: "98% customer satisfaction rate"
+    results: "98% participant satisfaction rate"
   },
   {
     id: "shOUter",
     title: "shOUter",
-    category: "Outdoor Living",
+    category: "Home Services",
     image: "/portfolio/shouter.png",
-    url: "https://shouter.app", // Strategic: proper domain
-    description: "Care for your home",
+    url: "https://shouter.app",
+    description: "Care for your home with comprehensive maintenance and improvement services",
     featured: true,
     status: "completed",
-    tags: ["entertainment", "transformation", "outdoor-living"],
+    tags: ["home-care", "maintenance", "mobile-app"],
     year: 2023,
-    testimonial: "Transformed our backyard into our favorite room of the house",
-    results: "Winner of Outdoor Living Award 2023"
+    testimonial: "Transformed our home maintenance experience completely",
+    results: "Winner of Home Services Innovation Award 2023"
   },
   {
-    id: "Be Kept Up",
+    id: "be-kept-up",
     title: "Be Kept Up",
-    category: "Home Services",
+    category: "Digital Marketing",
     image: "/portfolio/bekeptup.png",
-    url: "https://bekeptup-digitalagency.webflow.io", // Strategic: proper domain
+    url: "https://bekeptup-digitalagency.webflow.io",
     description: "Are You Ready to Amplify Your Online Presence",
     status: "active",
-    tags: ["maintenance", "improvement", "support"],
+    tags: ["digital-marketing", "online-presence", "amplification"],
     year: 2024,
-    results: "500+ homes serviced annually"
+    results: "500+ businesses amplified online presence"
   },
   {
-    id: "Epsy",
+    id: "epsy",
     title: "Epsy",
-    category: "Pool Maintenance",
+    category: "Healthcare",
     image: "/portfolio/epsy.png",
-    url: "https://epsyhealth.com", // Strategic: proper domain
+    url: "https://epsyhealth.com",
     description: "You deserve the best epilepsy care",
     status: "active",
-    tags: ["eco-friendly", "maintenance", "professional"],
+    tags: ["healthcare", "epilepsy", "medical-care"],
     year: 2024,
-    results: "Zero chemical incidents in 3 years"
+    results: "Improved care outcomes for thousands of patients"
   },
   {
-    id: "Box Office Theory",
+    id: "box-office-theory",
     title: "Box Office Theory",
-    category: "Outdoor Construction",
+    category: "Entertainment Analytics",
     image: "/portfolio/boxofficetheory.png",
-    url: "https://boxofficetheory.com", // Strategic: proper domain
+    url: "https://boxofficetheory.com",
     description: "Discover how Box Office Theory's comprehensive analysis and forecasting services can help you unlock the full potential of every cinematic release",
     status: "completed",
-    tags: ["construction", "weather-resistant", "custom"],
+    tags: ["entertainment", "analytics", "forecasting"],
     year: 2023,
-    results: "25-year warranty on all installations"
+    results: "Accurate predictions for 95% of major releases"
   },
   {
     id: "thinkbettergroup",
     title: "ThinkBetter",
-    category: "Pool Construction",
+    category: "Sustainability",
     image: "/portfolio/thinkbettergroup.png",
-    url: "https://thinkbettergroup.com", // Strategic: proper domain
-    description: "Our Brands Elimanate the Need for 760 Tonnes of PLastic a Year",
+    url: "https://thinkbettergroup.com",
+    description: "Our Brands Eliminate the Need for 760 Tonnes of Plastic a Year",
     featured: true,
     status: "ongoing",
-    tags: ["premium", "smart-technology", "custom-features"],
+    tags: ["sustainability", "environmental", "plastic-reduction"],
     year: 2024,
-    results: "$2M+ in luxury pool projects completed"
+    results: "760+ tonnes of plastic eliminated annually"
   },
   {
     id: "monkeytail-agency",
     title: "Monkeytail Agency",
     category: "Digital Agency",
-    image: "/portfolio/monkeymail.png"
+    image: "/portfolio/monkeymail.png",
     url: "https://monkeytail-agency.webflow.io",
     description: "Creative digital agency specializing in modern web solutions",
     status: "active",
@@ -156,7 +156,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "mema-consultants",
     title: "MEMA Consultants",
-    category: "Consulting",
+    category: "Business Consulting",
     image: "/portfolio/memaconsultants.png",
     url: "https://memaconsultants.webflow.io",
     description: "Professional consulting services for business growth and strategy",
@@ -167,7 +167,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "planetary-stellar",
     title: "Planetary Stellar",
-    category: "Technology",
+    category: "Space Technology",
     image: "/portfolio/planetary22.png",
     url: "https://planetarys-stellar-site.webflow.io",
     description: "Innovative technology solutions for the space industry",
