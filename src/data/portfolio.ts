@@ -198,7 +198,7 @@ export const portfolioItems: PortfolioItem[] = [
     year: 2024
   },
   {
-    id: "akel-entertainment",
+    id: "akeld-entertainment",
     title: "Akel Entertainment",
     category: "Entertainment",
     image: "/portfolio/akeld-logo.png",
