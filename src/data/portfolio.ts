@@ -199,7 +199,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "akeld-entertainment",
-    title: "Akel Entertainment",
+    title: "Akeld Entertainment",
     category: "Entertainment",
     image: "/portfolio/akeld-logo.png",
     url: "https://akeldentertainment.com",
