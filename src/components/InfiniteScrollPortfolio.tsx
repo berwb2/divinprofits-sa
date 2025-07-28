@@ -5,19 +5,21 @@ const InfiniteScrollPortfolio = () => {
   // Track which images have failed to load
   const [failedImages, setFailedImages] = useState(new Set());
   
-  // Calculate animation duration based on number of logos
-  // Each logo should be visible for ~3 seconds, with smooth scrolling
-  const logoCount = logoItems.length;
-  const animationDuration = logoCount * 3; // 3 seconds per logo
-  
-  // Debug logging
-  console.log('Total logos:', logoCount);
-  console.log('Animation duration:', animationDuration + 's');
-  console.log('Logo paths:', logoItems.map(item => item.image));
-  
-  // Filter out failed images and duplicate the remaining items
+  // Filter out failed images and create multiple copies for seamless infinite scroll
   const validLogoItems = logoItems.filter(item => !failedImages.has(item.id));
-  const duplicatedItems = [...validLogoItems, ...validLogoItems];
+  
+  // Create enough duplicates to ensure seamless scrolling
+  // We need at least 3 sets to prevent any gaps during the animation cycle
+  const triplicatedItems = [
+    ...validLogoItems,
+    ...validLogoItems,
+    ...validLogoItems
+  ];
+  
+  // Calculate total width and animation duration
+  const itemWidth = 192 + 24; // w-48 (192px) + gap-6 (24px)
+  const totalWidth = validLogoItems.length * itemWidth;
+  const animationDuration = Math.max(20, validLogoItems.length * 2); // Minimum 20s, 2s per logo
 
   const handleImageError = (item) => {
     console.error(`Failed to load image: ${item.image}`);
@@ -42,12 +44,12 @@ const InfiniteScrollPortfolio = () => {
       <div className="relative">
         {/* Main scrolling container */}
         <div 
-          className="flex animate-infinite-scroll gap-6"
+          className="flex gap-6 infinite-scroll-container"
           style={{
-            animationDuration: `${animationDuration}s`
+            width: `${totalWidth * 3}px`
           }}
         >
-          {duplicatedItems.map((item, index) => (
+          {triplicatedItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
               className="flex-shrink-0 w-48 h-32 relative group cursor-pointer"
@@ -65,6 +67,19 @@ const InfiniteScrollPortfolio = () => {
             </div>
           ))}
         </div>
+        
+        {/* Dynamic CSS animation using CSS variables */}
+        <style>
+          {`
+            .infinite-scroll-container {
+              animation: infiniteScrollCustom ${animationDuration}s linear infinite;
+            }
+            @keyframes infiniteScrollCustom {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-${totalWidth}px); }
+            }
+          `}
+        </style>
       </div>
     </section>
   );
