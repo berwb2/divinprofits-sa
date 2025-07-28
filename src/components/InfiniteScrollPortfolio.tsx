@@ -1,35 +1,42 @@
-
 import { logoItems } from "../data/logos";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 const InfiniteScrollPortfolio = () => {
-  const [failedImages, setFailedImages] = useState(new Set());
-  const [validItems, setValidItems] = useState(logoItems);
+  const [loadedImages, setLoadedImages] = useState(new Set<string>());
+  const [failedImages, setFailedImages] = useState(new Set<string>());
   
-  // Filter out failed images
-  useEffect(() => {
-    const filtered = logoItems.filter(item => !failedImages.has(item.id));
-    setValidItems(filtered);
+  // Filter out failed images and only include successfully loaded ones
+  const validItems = useMemo(() => {
+    return logoItems.filter(item => {
+      // Exclude items that have failed to load
+      if (failedImages.has(item.id)) return false;
+      
+      // If we haven't tried to load it yet, include it
+      // If it's loaded successfully, include it
+      return true;
+    });
   }, [failedImages]);
 
-  // Create enough duplicates for seamless infinite scroll
-  // We need at least 2 complete sets to ensure no gaps
-  const duplicatedItems = [...validItems, ...validItems];
-  
-  const handleImageError = (item) => {
-    console.error(`Failed to load image: ${item.image}`);
-    setFailedImages(prev => new Set([...prev, item.id]));
+  const handleImageLoad = (itemId: string) => {
+    setLoadedImages(prev => new Set([...prev, itemId]));
   };
 
-  const handleImageLoad = (item) => {
-    console.log(`Successfully loaded: ${item.image}`);
+  const handleImageError = (itemId: string) => {
+    setFailedImages(prev => new Set([...prev, itemId]));
   };
 
-  // Calculate animation duration based on number of items
-  const animationDuration = Math.max(30, validItems.length * 2);
+  // Create enough duplicates for seamless infinite scroll (4 sets to ensure no gaps)
+  const duplicatedItems = useMemo(() => {
+    const items = [...validItems, ...validItems, ...validItems, ...validItems];
+    return items;
+  }, [validItems]);
+
+  // Calculate the width for one complete set
+  const itemWidth = 192 + 24; // w-48 (192px) + gap-6 (24px)
+  const singleSetWidth = validItems.length * itemWidth;
   
   return (
-    <section className="py-16 bg-gray-50 overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-gray-50 to-gray-100 overflow-hidden">
       <div className="mb-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Trusted By Over 20+ Brands
@@ -37,44 +44,50 @@ const InfiniteScrollPortfolio = () => {
       </div>
       
       <div className="relative">
+        {/* Gradient overlays for smooth fade effect */}
+        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-gray-100 to-transparent z-10 pointer-events-none"></div>
+        
         {/* Infinite scroll container */}
-        <div className="flex gap-6 animate-infinite-scroll">
+        <div 
+          className="flex gap-6 will-change-transform"
+          style={{
+            animation: `infiniteScroll ${Math.max(30, validItems.length * 3)}s linear infinite`,
+            width: `${duplicatedItems.length * itemWidth}px`
+          }}
+        >
           {duplicatedItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
               className="flex-shrink-0 w-48 h-32 relative group cursor-pointer"
             >
-              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white p-4 flex items-center justify-center">
+              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 bg-white p-6 flex items-center justify-center border border-gray-100">
                 <img
                   src={item.image}
-                  alt={item.alt}
-                  className="max-w-full max-h-full object-contain filter grayscale brightness-75 contrast-105 hover:grayscale-0 hover:brightness-100 transition-all duration-300"
+                  alt={item.alt || `${item.name} logo`}
+                  className="max-w-full max-h-full object-contain filter grayscale brightness-75 contrast-105 hover:grayscale-0 hover:brightness-100 transition-all duration-300 group-hover:scale-105"
                   draggable={false}
-                  onError={() => handleImageError(item)}
-                  onLoad={() => handleImageLoad(item)}
+                  onLoad={() => handleImageLoad(item.id)}
+                  onError={() => handleImageError(item.id)}
+                  loading="lazy"
                 />
               </div>
             </div>
           ))}
         </div>
-        
-        {/* CSS for infinite scroll animation */}
-        <style>{`
-          @keyframes infinite-scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-${(validItems.length * (192 + 24))}px);
-            }
-          }
-          
-          .animate-infinite-scroll {
-            animation: infinite-scroll ${animationDuration}s linear infinite;
-            width: ${duplicatedItems.length * (192 + 24)}px;
-          }
-        `}</style>
       </div>
+      
+      {/* CSS for infinite scroll animation */}
+      <style>{`
+        @keyframes infiniteScroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-${singleSetWidth}px);
+          }
+        }
+      `}</style>
     </section>
   );
 };

@@ -21,28 +21,10 @@ export const logoItems: LogoItem[] = [
     alt: ""
   },
   {
-    id: "brand-logo-1",
-    name: "Brand Logo",
-    image: "/logos/65153b5d01897d1fe306e882_image 1.webp",
-    alt: ""
-  },
-  {
-    id: "agent-c",
-    name: "Agent C",
-    image: "/logos/65a921ad64e60f80820b0388_agent c logo.webp",
-    alt: "Agent C logo"
-  },
-  {
     id: "bekeptup",
     name: "Be Kept Up",
     image: "/logos/65d276e5b62184f9a467b588_BeKeptUp_Logo(WHITE).svg",
     alt: "BeKeptUp logo"
-  },
-  {
-    id: "company-logo-1",
-    name: "Company Logo",
-    image: "/logos/666bcdb8e8bcdff028078ab7_290976955_436445728339805_6458611427246148062_n.webp",
-    alt: ""
   },
   {
     id: "brand-logo-2",
