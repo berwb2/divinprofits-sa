@@ -80,11 +80,11 @@ export const portfolioItems: PortfolioItem[] = [
     results: "98% participant satisfaction rate"
   },
   {
-    id: "shOUter",
-    title: "shOUter",
+    id: "kingcontractor",
+    title: "kingcontractor",
     category: "Home Services",
-    image: "/portfolio/shouter.png",
-    url: "https://shouter.app",
+    image: "/portfolio/kc.png",
+    url: "https://kingcontractor.com",
     description: "Care for your home with comprehensive maintenance and improvement services",
     featured: true,
     status: "completed",
