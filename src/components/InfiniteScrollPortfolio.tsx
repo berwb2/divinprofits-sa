@@ -11,8 +11,7 @@ const InfiniteScrollPortfolio = () => {
       // Exclude items that have failed to load
       if (failedImages.has(item.id)) return false;
       
-      // If we haven't tried to load it yet, include it
-      // If it's loaded successfully, include it
+      // Include all items that haven't failed
       return true;
     });
   }, [failedImages]);
@@ -21,7 +20,8 @@ const InfiniteScrollPortfolio = () => {
     setLoadedImages(prev => new Set([...prev, itemId]));
   };
 
-  const handleImageError = (itemId: string) => {
+  const handleImageError = (itemId: string, imageSrc?: string) => {
+    console.warn(`Failed to load image: ${itemId}${imageSrc ? ` (${imageSrc})` : ''}`);
     setFailedImages(prev => new Set([...prev, itemId]));
   };
 
@@ -68,7 +68,7 @@ const InfiniteScrollPortfolio = () => {
                   className="max-w-full max-h-full object-contain filter grayscale brightness-75 contrast-105 hover:grayscale-0 hover:brightness-100 transition-all duration-300 group-hover:scale-105"
                   draggable={false}
                   onLoad={() => handleImageLoad(item.id)}
-                  onError={() => handleImageError(item.id)}
+                  onError={() => handleImageError(item.id, item.image)}
                   loading="lazy"
                 />
               </div>

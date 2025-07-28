@@ -6,66 +6,40 @@ export type LogoItem = {
   alt: string;
 };
 
-// All logos from the logos folder
-export const logoItems: LogoItem[] = [
-  {
-    id: "think-better-group",
-    name: "Think Better Group",
-    image: "/logos/6030440c762631187bacd1de_logo-think-better-grou.svg",
-    alt: "Think Better Group logo"
-  },
-  {
-    id: "colored-logo-1",
-    name: "Colored Logo",
-    image: "/logos/650041511a2cfcc288fc52af_colored logo.png",
-    alt: ""
-  },
-  {
-    id: "bekeptup",
-    name: "Be Kept Up",
-    image: "/logos/65d276e5b62184f9a467b588_BeKeptUp_Logo(WHITE).svg",
-    alt: "BeKeptUp logo"
-  },
-  {
-    id: "brand-logo-2",
-    name: "Brand Logo",
-    image: "/logos/66c5cb6277cd3bc3c2f153ee_logo.svg",
-    alt: ""
-  },
-  {
-    id: "cycling-tom",
-    name: "Cycling Tom",
-    image: "/logos/66d2058e0f2a04e5459162be_Cycling Tom Hire & Tours Logo WHITE-p-500.png",
-    alt: "Cycling Tom Hire & Tours logo"
-  },
-  {
-    id: "colored-logo-2",
-    name: "Colored Logo",
-    image: "/logos/679b1c2c15531716e73afc5c_Logo Colored.avif",
-    alt: ""
-  },
-  {
-    id: "asset-1",
-    name: "Asset 1",
-    image: "/logos/Asset-1.svg",
-    alt: ""
-  },
-  {
-    id: "group-148",
-    name: "Group 148",
-    image: "/logos/Group-148.svg",
-    alt: ""
-  },
-  {
-    id: "livello-1",
-    name: "Livello 1",
-    image: "/logos/Livello-1.svg",
-    alt: ""
-  },
-  {
-    id: "akeld",
-    name: "Akeld",
-    image: "/logos/akeld-logo.png",
-    alt: "Akeld logo"
-  }
+// Dynamically generate logo items from all files in the logos folder
+const logoFileNames = [
+  "66d2058e0f2a04e5459162be_Cycling Tom Hire & Tours Logo WHITE-p-500.png",
+  "akeld-logo.png",
+  "boxofficetheorylogo.png",
+  "epsy.png",
+  "kc.PNG",
+  "thinkbettergroup.PNG"
 ];
+
+// Function to create a clean name from filename
+const createNameFromFilename = (filename: string): string => {
+  return filename
+    .replace(/\.(png|jpg|jpeg|svg|webp|avif|PNG|JPG|JPEG|SVG|WEBP|AVIF)$/i, '') // Remove extension
+    .replace(/[-_]/g, ' ') // Replace hyphens and underscores with spaces
+    .replace(/\b\w/g, l => l.toUpperCase()) // Capitalize first letter of each word
+    .replace(/^\d+[a-f\d]*\s*/i, '') // Remove leading hash-like strings
+    .trim();
+};
+
+// Generate logo items dynamically
+export const logoItems: LogoItem[] = logoFileNames.map((filename, index) => {
+  const cleanName = createNameFromFilename(filename);
+  return {
+    id: `logo-${index}-${filename.replace(/[^a-zA-Z0-9]/g, '')}`,
+    name: cleanName,
+    image: `/logos/${filename}`,
+    alt: `${cleanName} logo`
+  };
+});
+
+// Helper function to add new logos - call this to refresh the list
+export const refreshLogoItems = (): LogoItem[] => {
+  // This would be used if we had a way to dynamically scan the folder
+  // For now, manually add new filenames to the logoFileNames array above
+  return logoItems;
+};
