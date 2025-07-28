@@ -1,37 +1,32 @@
+
 import { logoItems } from "../data/logos";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const InfiniteScrollPortfolio = () => {
-  // Track which images have failed to load
   const [failedImages, setFailedImages] = useState(new Set());
+  const [validItems, setValidItems] = useState(logoItems);
   
-  // Filter out failed images and create multiple copies for seamless infinite scroll
-  const validLogoItems = logoItems.filter(item => !failedImages.has(item.id));
-  
-  // Create enough duplicates to ensure seamless scrolling
-  // We need at least 3 sets to prevent any gaps during the animation cycle
-  const triplicatedItems = [
-    ...validLogoItems,
-    ...validLogoItems,
-    ...validLogoItems
-  ];
-  
-  // Calculate total width and animation duration
-  const itemWidth = 192 + 24; // w-48 (192px) + gap-6 (24px)
-  const totalWidth = validLogoItems.length * itemWidth;
-  const animationDuration = Math.max(20, validLogoItems.length * 2); // Minimum 20s, 2s per logo
+  // Filter out failed images
+  useEffect(() => {
+    const filtered = logoItems.filter(item => !failedImages.has(item.id));
+    setValidItems(filtered);
+  }, [failedImages]);
 
+  // Create enough duplicates for seamless infinite scroll
+  // We need at least 2 complete sets to ensure no gaps
+  const duplicatedItems = [...validItems, ...validItems];
+  
   const handleImageError = (item) => {
     console.error(`Failed to load image: ${item.image}`);
-    console.log(`Image path attempted: ${item.image}`);
-    
-    // Add to failed images set to hide this image
     setFailedImages(prev => new Set([...prev, item.id]));
   };
 
   const handleImageLoad = (item) => {
     console.log(`Successfully loaded: ${item.image}`);
   };
+
+  // Calculate animation duration based on number of items
+  const animationDuration = Math.max(30, validItems.length * 2);
   
   return (
     <section className="py-16 bg-gray-50 overflow-hidden">
@@ -42,14 +37,9 @@ const InfiniteScrollPortfolio = () => {
       </div>
       
       <div className="relative">
-        {/* Main scrolling container */}
-        <div 
-          className="flex gap-6 infinite-scroll-container"
-          style={{
-            width: `${totalWidth * 3}px`
-          }}
-        >
-          {triplicatedItems.map((item, index) => (
+        {/* Infinite scroll container */}
+        <div className="flex gap-6 animate-infinite-scroll">
+          {duplicatedItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
               className="flex-shrink-0 w-48 h-32 relative group cursor-pointer"
@@ -68,18 +58,22 @@ const InfiniteScrollPortfolio = () => {
           ))}
         </div>
         
-        {/* Dynamic CSS animation using CSS variables */}
-        <style>
-          {`
-            .infinite-scroll-container {
-              animation: infiniteScrollCustom ${animationDuration}s linear infinite;
+        {/* CSS for infinite scroll animation */}
+        <style jsx>{`
+          @keyframes infinite-scroll {
+            0% {
+              transform: translateX(0);
             }
-            @keyframes infiniteScrollCustom {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-${totalWidth}px); }
+            100% {
+              transform: translateX(-${(validItems.length * (192 + 24))}px);
             }
-          `}
-        </style>
+          }
+          
+          .animate-infinite-scroll {
+            animation: infinite-scroll ${animationDuration}s linear infinite;
+            width: ${duplicatedItems.length * (192 + 24)}px;
+          }
+        `}</style>
       </div>
     </section>
   );
