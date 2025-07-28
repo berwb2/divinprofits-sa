@@ -59,7 +59,7 @@ const InfiniteScrollPortfolio = () => {
         </div>
         
         {/* CSS for infinite scroll animation */}
-        <style jsx>{`
+        <style>{`
           @keyframes infinite-scroll {
             0% {
               transform: translateX(0);
